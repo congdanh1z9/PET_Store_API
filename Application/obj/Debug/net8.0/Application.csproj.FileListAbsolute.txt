@@ -1,0 +1,15 @@
+D:\PRM392\GIT\Pet_Store_API\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+D:\PRM392\GIT\Pet_Store_API\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\PRM392\GIT\Pet_Store_API\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+D:\PRM392\GIT\Pet_Store_API\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+D:\PRM392\GIT\Pet_Store_API\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+D:\PRM392\GIT\Pet_Store_API\Application\bin\Debug\net8.0\Application.deps.json
+D:\PRM392\GIT\Pet_Store_API\Application\bin\Debug\net8.0\Application.dll
+D:\PRM392\GIT\Pet_Store_API\Application\bin\Debug\net8.0\Application.pdb
+D:\PRM392\GIT\Pet_Store_API\Application\bin\Debug\net8.0\Domain.dll
+D:\PRM392\GIT\Pet_Store_API\Application\bin\Debug\net8.0\Domain.pdb
+D:\PRM392\GIT\Pet_Store_API\Application\obj\Debug\net8.0\Application.csproj.CopyComplete
+D:\PRM392\GIT\Pet_Store_API\Application\obj\Debug\net8.0\Application.dll
+D:\PRM392\GIT\Pet_Store_API\Application\obj\Debug\net8.0\refint\Application.dll
+D:\PRM392\GIT\Pet_Store_API\Application\obj\Debug\net8.0\Application.pdb
+D:\PRM392\GIT\Pet_Store_API\Application\obj\Debug\net8.0\ref\Application.dll
