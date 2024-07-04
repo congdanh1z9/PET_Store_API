@@ -10,20 +10,21 @@ namespace Infrastructures
         {
         }
 
-        public DbSet<Pet> Pets { get; set; }
-
-        public DbSet<User> Users { get; set; }
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<BussinessPlan> BussinessPlans { get; set; }
         public DbSet<Domain.Entitys.Type> Types { get; set; }
-        public DbSet<Booking> Bookings { get; set; }
-        public DbSet<Service> Services { get; set; }
-        public DbSet<ServiceProvider> serviceProviders { get; set; }
-        public DbSet<BookingDetail> bookingDetails { get; set; }
+        public DbSet<Kind> Kinds { get; set; }
+        public DbSet<Buyer> Buyers { get; set; }
+        public DbSet<Shop> Shops { get; set; }
+        public DbSet<Image> Images { get; set; }
+        public DbSet<Meet> Meets { get; set; }
+        public DbSet<PostPet> PostPets { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new BookingConfiguration());
-            modelBuilder.ApplyConfiguration(new PetConfiguration());
-            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new AccountConfiguration());
+            modelBuilder.ApplyConfiguration(new PostPetConfiguration());
+            modelBuilder.ApplyConfiguration(new BuyerConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
