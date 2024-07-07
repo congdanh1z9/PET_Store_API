@@ -10,3 +10,15 @@ D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\Domain.dll
 D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\Domain.pdb
 D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\ref\Domain.dll
+E:\PRM-api\Domain\bin\Debug\net8.0\Domain.deps.json
+E:\PRM-api\Domain\bin\Debug\net8.0\Domain.dll
+E:\PRM-api\Domain\bin\Debug\net8.0\Domain.pdb
+E:\PRM-api\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\PRM-api\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+E:\PRM-api\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+E:\PRM-api\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+E:\PRM-api\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+E:\PRM-api\Domain\obj\Debug\net8.0\Domain.dll
+E:\PRM-api\Domain\obj\Debug\net8.0\refint\Domain.dll
+E:\PRM-api\Domain\obj\Debug\net8.0\Domain.pdb
+E:\PRM-api\Domain\obj\Debug\net8.0\ref\Domain.dll

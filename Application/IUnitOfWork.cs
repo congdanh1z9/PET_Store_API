@@ -11,5 +11,8 @@ namespace Application
     {
         public Task<int> SaveChangeAsync();
         public IAccountRepository AccountRepository { get; }
+        public IBusinessPlanRepository BusinessPlanRepository { get; }
+        IImageRepository ImageRepository { get; }
+        ITypeRepository TypeRepository { get; }
     }
 }

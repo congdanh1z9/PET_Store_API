@@ -65,6 +65,21 @@ namespace Infrastructures.Repositorys
             _dbSet.Update(entity);
         }
 
+        public async Task UpdateAsync(TEntity entity)
+        {
+            entity.ModificationDate = _timeService.GetCurrentTime();
+            entity.ModificationBy = _claimsService.GetCurrentUserId;
+            _dbSet.Update(entity);
+            await Task.CompletedTask;
+        }
+
+        public async Task DeleteAsync(TEntity entity)
+        {
+            _dbSet.Remove(entity);
+            await Task.CompletedTask;
+        }
+
+
         public async Task AddRangeAsync(List<TEntity> entities)
         {
             foreach (var entity in entities)
