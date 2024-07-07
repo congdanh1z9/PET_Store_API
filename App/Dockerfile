@@ -1,21 +1,22 @@
-# Sử dụng image .NET SDK để build ứng dụng
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
+# Use the SDK image to build the application
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+WORKDIR /App
 
-# Copy mã nguồn vào container và restore các package
+# Copy everything
 COPY . ./
+
+# Restore as distinct layers
 RUN dotnet restore
 
-# Build ứng dụng
+# Build and publish a release
 RUN dotnet publish -c Release -o out
 
-# Sử dụng image ASP.NET Core Runtime để chạy ứng dụng
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
-WORKDIR /app
-COPY --from=build /app/out ./
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /App
 
-# Expose cổng mà ứng dụng sẽ lắng nghe
-EXPOSE 80
+# Copy the published output from build stage
+COPY --from=build-env /App/out .
 
-# Chạy ứng dụng khi container được khởi động
-ENTRYPOINT ["dotnet", "Pet_Store_API.dll"]
+# Specify the entry point for the application
+ENTRYPOINT ["dotnet", "DotNet.Docker.dll"]
