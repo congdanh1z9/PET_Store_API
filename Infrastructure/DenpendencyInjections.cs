@@ -20,6 +20,15 @@ namespace Infrastructures
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IAccountService, AccountService>();
 
+            services.AddScoped<IBusinessPlanRepository, BusinessPlanRepository>();
+            services.AddScoped<IBusinessPlanService, BusinessPlanService>();
+
+            services.AddScoped<IImageRepository, ImageRepository>();
+            services.AddScoped<IImageService, ImageService>();
+
+            services.AddScoped<ITypeRepository, TypeRepository>();
+            services.AddScoped<ITypeService, TypeService>();
+
             services.AddDbContext<AppDbContext>(option => option.UseNpgsql(databaseConnection));
             services.AddAutoMapper(typeof(MapperConfigurationsProfile).Assembly);
             return services;
