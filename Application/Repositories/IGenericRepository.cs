@@ -2,7 +2,6 @@
 using Domain.Entitys;
 using System.Linq.Expressions;
 
-
 namespace Application.Repositories
 {
     public interface IGenericRepository<TEntity> where TEntity : BaseEntity
@@ -16,6 +15,6 @@ namespace Application.Repositories
         Task AddRangeAsync(List<TEntity> entities);
         void SoftRemoveRange(List<TEntity> entities);
         Task<Pagination<TEntity>> ToPagination(int pageNumber = 0, int pageSize = 10);
-
+        Task<TEntity?> FindAsync(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includes);
     }
 }

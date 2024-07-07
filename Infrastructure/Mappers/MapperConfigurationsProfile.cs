@@ -1,4 +1,3 @@
-﻿using Application.ViewModels.AccountDTO;
 using AutoMapper;
 using Domain.Entitys;
 
@@ -8,9 +7,7 @@ namespace Infrastructures.Mappers
     {
         public MapperConfigurationsProfile()
         {
-            //CreateMap(typeof(Pagination<>), typeof(Pagination<>));
             CreateMap<Account, AccountViewDTO>().ReverseMap();
         }
-
     }
 }

@@ -3,10 +3,8 @@ using Application.ServiceReponses;
 using Application.ViewModels.AccountDTO;
 using AutoMapper;
 using Domain.Entitys;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Application.Services
@@ -22,16 +20,16 @@ namespace Application.Services
         }
         public async Task<ServiceResponse<List<AccountViewDTO>>> ViewAllAccounts()
         {
-            var reponse = new ServiceResponse<List<AccountViewDTO>>();
+            var response = new ServiceResponse<List<AccountViewDTO>>();
             var accounts = await _unitOfWork.AccountRepository.GetAllAsync();
-            List<AccountViewDTO> dtos = new List<AccountViewDTO>();
-            foreach (var account in accounts)
+            response.Data = _mapper.Map<List<AccountViewDTO>>(accounts);
+            return response;
             {
-                dtos.Add(_mapper.Map<AccountViewDTO>(account));
+            var response = new ServiceResponse<string>();
             }
-            reponse.Data = dtos;
 
-            return reponse;
+
+            response.Data = "Đổi mật khẩu thành công!";
         }
     }
 }

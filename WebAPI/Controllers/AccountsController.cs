@@ -1,6 +1,5 @@
 ﻿using Application.Interfaces;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -24,14 +23,14 @@ namespace WebAPI.Controllers
             return Ok(result);
         }
 
-        [HttpGet("inputname/{input}")]
+        [HttpPost("login")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public IActionResult Inputname(string input)
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         {
-            var result = $"{input} + HELLO backend";
+            var result = await _accountService.Login(loginDTO.Email, loginDTO.Password);
             return Ok(result);
         }
     }
 
-    
+        [HttpPost("changepassword")]
 }
