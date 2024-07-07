@@ -18,4 +18,4 @@ COPY --from=build /app/out ./
 EXPOSE 80
 
 # Chạy ứng dụng khi container được khởi động
-ENTRYPOINT ["dotnet", "Pet_Store_API.dll"]
+ENTRYPOINT ["dotnet", "DotNet.Docker.dll"]
