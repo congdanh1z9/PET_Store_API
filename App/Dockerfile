@@ -1,21 +1,15 @@
-# Sử dụng image .NET SDK để build ứng dụng
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+WORKDIR /App
 
-# Copy mã nguồn vào container và restore các package
+# Copy everything
 COPY . ./
+# Restore as distinct layers
 RUN dotnet restore
-
-# Build ứng dụng
+# Build and publish a release
 RUN dotnet publish -c Release -o out
 
-# Sử dụng image ASP.NET Core Runtime để chạy ứng dụng
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
-WORKDIR /app
-COPY --from=build /app/out ./
-
-# Expose cổng mà ứng dụng sẽ lắng nghe
-EXPOSE 80
-
-# Chạy ứng dụng khi container được khởi động
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /App
+COPY --from=build-env /App/out .
 ENTRYPOINT ["dotnet", "DotNet.Docker.dll"]
