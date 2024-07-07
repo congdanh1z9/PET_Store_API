@@ -1,5 +1,5 @@
 # Sử dụng image .NET SDK để build ứng dụng
-FROM mcr.microsoft.com/dotnet/sdk:8.0.106 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
 # Copy mã nguồn vào container và restore các package
@@ -10,7 +10,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o out
 
 # Sử dụng image ASP.NET Core Runtime để chạy ứng dụng
-FROM mcr.microsoft.com/dotnet/aspnet:8.0.106 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/out ./
 
