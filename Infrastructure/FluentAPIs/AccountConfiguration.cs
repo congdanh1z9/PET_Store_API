@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-
 namespace Infrastructures.FluentAPIs
 {
     public class AccountConfiguration : IEntityTypeConfiguration<Account>

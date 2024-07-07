@@ -22,6 +22,9 @@ namespace Infrastructures.Mappers
             CreateMap<Domain.Entitys.Type, TypeViewDTO>().ReverseMap();
             CreateMap<Domain.Entitys.Type, TypeCreateDTO>().ReverseMap();
             CreateMap<Domain.Entitys.Type, TypeUpdateDTO>().ReverseMap();
+            CreateMap<Account, AccountViewDTO>().ReverseMap();
+            CreateMap<RegisterDTO, Account>();
+            CreateMap<ChangePasswordDTO, Account>();
         }
 
     }
