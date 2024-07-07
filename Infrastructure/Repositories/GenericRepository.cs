@@ -135,5 +135,9 @@ namespace Infrastructures.Repositorys
         {
             throw new NotImplementedException();
         }
+        public async Task<TEntity> GetFirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
+        {
+            return await _dbSet.FirstOrDefaultAsync(predicate);
+        }
     }
 }

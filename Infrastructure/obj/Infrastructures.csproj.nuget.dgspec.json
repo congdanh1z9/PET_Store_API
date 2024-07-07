@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\PRM-api\\Infrastructure\\Infrastructures.csproj": {}
+    "D:\\PRM-API\\PET_Store_API\\Infrastructure\\Infrastructures.csproj": {}
   },
   "projects": {
-    "E:\\PRM-api\\Application\\Application.csproj": {
+    "D:\\PRM-API\\PET_Store_API\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PRM-api\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\PRM-API\\PET_Store_API\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "E:\\PRM-api\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\nhatd\\.nuget\\packages\\",
-        "outputPath": "E:\\PRM-api\\Application\\obj\\",
+        "projectPath": "D:\\PRM-API\\PET_Store_API\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\thang\\.nuget\\packages\\",
+        "outputPath": "D:\\PRM-API\\PET_Store_API\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nhatd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\PRM-api\\Domain\\Domain.csproj": {
-                "projectPath": "E:\\PRM-api\\Domain\\Domain.csproj"
+              "D:\\PRM-API\\PET_Store_API\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\PRM-API\\PET_Store_API\\Domain\\Domain.csproj"
               }
             }
           }
@@ -64,6 +64,10 @@
             "NETCore.MailKit": {
               "target": "Package",
               "version": "[2.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[9.0.1, )"
             }
           },
           "imports": [
@@ -82,21 +86,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\PRM-api\\Domain\\Domain.csproj": {
+    "D:\\PRM-API\\PET_Store_API\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PRM-api\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\PRM-API\\PET_Store_API\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "E:\\PRM-api\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\nhatd\\.nuget\\packages\\",
-        "outputPath": "E:\\PRM-api\\Domain\\obj\\",
+        "projectPath": "D:\\PRM-API\\PET_Store_API\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\thang\\.nuget\\packages\\",
+        "outputPath": "D:\\PRM-API\\PET_Store_API\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nhatd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -126,6 +130,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -142,21 +152,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\PRM-api\\Infrastructure\\Infrastructures.csproj": {
+    "D:\\PRM-API\\PET_Store_API\\Infrastructure\\Infrastructures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PRM-api\\Infrastructure\\Infrastructures.csproj",
+        "projectUniqueName": "D:\\PRM-API\\PET_Store_API\\Infrastructure\\Infrastructures.csproj",
         "projectName": "Infrastructures",
-        "projectPath": "E:\\PRM-api\\Infrastructure\\Infrastructures.csproj",
-        "packagesPath": "C:\\Users\\nhatd\\.nuget\\packages\\",
-        "outputPath": "E:\\PRM-api\\Infrastructure\\obj\\",
+        "projectPath": "D:\\PRM-API\\PET_Store_API\\Infrastructure\\Infrastructures.csproj",
+        "packagesPath": "C:\\Users\\thang\\.nuget\\packages\\",
+        "outputPath": "D:\\PRM-API\\PET_Store_API\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nhatd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -170,8 +180,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\PRM-api\\Application\\Application.csproj": {
-                "projectPath": "E:\\PRM-api\\Application\\Application.csproj"
+              "D:\\PRM-API\\PET_Store_API\\Application\\Application.csproj": {
+                "projectPath": "D:\\PRM-API\\PET_Store_API\\Application\\Application.csproj"
               }
             }
           }
@@ -209,6 +219,10 @@
               "target": "Package",
               "version": "[8.0.5, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -230,7 +244,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

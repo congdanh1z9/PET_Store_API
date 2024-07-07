@@ -1,12 +1,12 @@
-﻿using Application.Interfaces;
+﻿// Trong AccountRepository.cs
+using System;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
+using Application.Interfaces;
 using Application.Repositories;
 using Domain.Entitys;
 using Infrastructures.Repositorys;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructures.Repositories
 {
@@ -14,6 +14,11 @@ namespace Infrastructures.Repositories
     {
         public AccountRepository(AppDbContext context, ICurrentTime timeService, IClaimsService claimsService) : base(context, timeService, claimsService)
         {
+        }
+
+        public async Task<Account> GetFirstOrDefaultAsync(Expression<Func<Account, bool>> predicate)
+        {
+            return await _dbSet.FirstOrDefaultAsync(predicate);
         }
     }
 }
