@@ -24,10 +24,9 @@ namespace WebAPI.Controllers
             return Ok(result);
         }
 
-        [HttpGet]
+        [HttpGet("inputname/{input}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> InputString(string input)
+        public IActionResult Inputname(string input)
         {
             var result = $"{input} + HELLO backend";
             return Ok(result);
