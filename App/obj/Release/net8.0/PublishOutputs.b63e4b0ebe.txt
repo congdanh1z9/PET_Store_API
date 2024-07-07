@@ -1,0 +1,5 @@
+D:\PRM392\GIT\Pet_Store_API\App\bin\Release\net8.0\publish\DotNet.Docker.exe
+D:\PRM392\GIT\Pet_Store_API\App\bin\Release\net8.0\publish\DotNet.Docker.dll
+D:\PRM392\GIT\Pet_Store_API\App\bin\Release\net8.0\publish\DotNet.Docker.deps.json
+D:\PRM392\GIT\Pet_Store_API\App\bin\Release\net8.0\publish\DotNet.Docker.runtimeconfig.json
+D:\PRM392\GIT\Pet_Store_API\App\bin\Release\net8.0\publish\DotNet.Docker.pdb

@@ -24,9 +24,9 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseMiddleware<GlobalExceptionMiddleware>();
-app.UseMiddleware<PerformanceMiddleware>();
-app.UseMiddleware<ConfirmationTokenMiddleware>();
+//app.UseMiddleware<GlobalExceptionMiddleware>();
+//app.UseMiddleware<PerformanceMiddleware>();
+//app.UseMiddleware<ConfirmationTokenMiddleware>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
