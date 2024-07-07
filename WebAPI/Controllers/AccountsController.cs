@@ -23,6 +23,15 @@ namespace WebAPI.Controllers
             var result = await _accountService.ViewAllAccounts();
             return Ok(result);
         }
+
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> InputString(string input)
+        {
+            var result = $"{input} + HELLO backend";
+            return Ok(result);
+        }
     }
 
     
