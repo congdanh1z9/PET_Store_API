@@ -29,6 +29,12 @@ namespace Infrastructures
             services.AddScoped<ITypeRepository, TypeRepository>();
             services.AddScoped<ITypeService, TypeService>();
 
+            services.AddScoped<IMeetRepository, MeetRepository>();
+            services.AddScoped<IMeetService, MeetService>();
+
+            services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<IPostService, PostService>();
+
             services.AddDbContext<AppDbContext>(option => option.UseNpgsql(databaseConnection));
             services.AddAutoMapper(typeof(MapperConfigurationsProfile).Assembly);
             return services;

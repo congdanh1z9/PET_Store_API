@@ -14,5 +14,6 @@ namespace Application
         public IBusinessPlanRepository BusinessPlanRepository { get; }
         IImageRepository ImageRepository { get; }
         ITypeRepository TypeRepository { get; }
+        public IMeetRepository MeetRepository { get; }
     }
 }
