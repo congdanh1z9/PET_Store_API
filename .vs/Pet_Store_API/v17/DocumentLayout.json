@@ -3,96 +3,20 @@
   "WorkspaceRootPath": "E:\\PRM-api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|e:\\prm-api\\application\\services\\typeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|solutionrelative:application\\services\\typeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F036C2-9EAD-4025-89F1-29F6166B9B91}|Infrastructure\\Infrastructures.csproj|e:\\prm-api\\infrastructure\\denpendencyinjections.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8F036C2-9EAD-4025-89F1-29F6166B9B91}|Infrastructure\\Infrastructures.csproj|solutionrelative:infrastructure\\denpendencyinjections.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F036C2-9EAD-4025-89F1-29F6166B9B91}|Infrastructure\\Infrastructures.csproj|e:\\prm-api\\infrastructure\\mappers\\mapperconfigurationsprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8F036C2-9EAD-4025-89F1-29F6166B9B91}|Infrastructure\\Infrastructures.csproj|solutionrelative:infrastructure\\mappers\\mapperconfigurationsprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F036C2-9EAD-4025-89F1-29F6166B9B91}|Infrastructure\\Infrastructures.csproj|e:\\prm-api\\infrastructure\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8F036C2-9EAD-4025-89F1-29F6166B9B91}|Infrastructure\\Infrastructures.csproj|solutionrelative:infrastructure\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|e:\\prm-api\\application\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|solutionrelative:application\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|e:\\prm-api\\application\\viewmodels\\typedto\\typeviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|solutionrelative:application\\viewmodels\\typedto\\typeviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|e:\\prm-api\\application\\viewmodels\\typedto\\typecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|solutionrelative:application\\viewmodels\\typedto\\typecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|e:\\prm-api\\application\\viewmodels\\typedto\\typeupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|solutionrelative:application\\viewmodels\\typedto\\typeupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|e:\\prm-api\\webapi\\controllers\\typescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\typescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|e:\\prm-api\\application\\interfaces\\itypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|solutionrelative:application\\interfaces\\itypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F036C2-9EAD-4025-89F1-29F6166B9B91}|Infrastructure\\Infrastructures.csproj|e:\\prm-api\\infrastructure\\repositories\\typerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8F036C2-9EAD-4025-89F1-29F6166B9B91}|Infrastructure\\Infrastructures.csproj|solutionrelative:infrastructure\\repositories\\typerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|e:\\prm-api\\application\\repositories\\ityperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|solutionrelative:application\\repositories\\ityperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D213F3C-5123-4829-9457-E65821E65AA6}|Domain\\Domain.csproj|e:\\prm-api\\domain\\entitys\\type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D213F3C-5123-4829-9457-E65821E65AA6}|Domain\\Domain.csproj|solutionrelative:domain\\entitys\\type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|e:\\prm-api\\application\\viewmodels\\imagedto\\imageupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|solutionrelative:application\\viewmodels\\imagedto\\imageupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|e:\\prm-api\\application\\viewmodels\\imagedto\\imageviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|solutionrelative:application\\viewmodels\\imagedto\\imageviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|e:\\prm-api\\application\\viewmodels\\imagedto\\imagecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|solutionrelative:application\\viewmodels\\imagedto\\imagecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|e:\\prm-api\\webapi\\controllers\\businessplanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\businessplanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|e:\\prm-api\\webapi\\controllers\\imagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\imagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|e:\\prm-api\\application\\services\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|solutionrelative:application\\services\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|e:\\prm-api\\webapi\\controllers\\typescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\typescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|e:\\prm-api\\application\\interfaces\\iimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F036C2-9EAD-4025-89F1-29F6166B9B91}|Infrastructure\\Infrastructures.csproj|e:\\prm-api\\infrastructure\\repositories\\imagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8F036C2-9EAD-4025-89F1-29F6166B9B91}|Infrastructure\\Infrastructures.csproj|solutionrelative:infrastructure\\repositories\\imagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|e:\\prm-api\\application\\repositories\\iimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE8896A5-4ADC-4280-95DA-6EA1A91AB18F}|Application\\Application.csproj|solutionrelative:application\\repositories\\iimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D213F3C-5123-4829-9457-E65821E65AA6}|Domain\\Domain.csproj|e:\\prm-api\\domain\\entitys\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D213F3C-5123-4829-9457-E65821E65AA6}|Domain\\Domain.csproj|solutionrelative:domain\\entitys\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8F036C2-9EAD-4025-89F1-29F6166B9B91}|Infrastructure\\Infrastructures.csproj|e:\\prm-api\\infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8F036C2-9EAD-4025-89F1-29F6166B9B91}|Infrastructure\\Infrastructures.csproj|solutionrelative:infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|e:\\prm-api\\webapi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 92,
+          "SelectedChildIndex": 88,
           "Children": [
             {
               "$type": "Bookmark",
@@ -442,14 +366,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:9:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
@@ -457,308 +373,65 @@
               "Name": "ST:10:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TypeUpdateDTO.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Application\\ViewModels\\TypeDTO\\TypeUpdateDTO.cs",
-              "RelativeDocumentMoniker": "Application\\ViewModels\\TypeDTO\\TypeUpdateDTO.cs",
-              "ToolTip": "E:\\PRM-api\\Application\\ViewModels\\TypeDTO\\TypeUpdateDTO.cs",
-              "RelativeToolTip": "Application\\ViewModels\\TypeDTO\\TypeUpdateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T14:01:36.046Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TypeCreateDTO.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Application\\ViewModels\\TypeDTO\\TypeCreateDTO.cs",
-              "RelativeDocumentMoniker": "Application\\ViewModels\\TypeDTO\\TypeCreateDTO.cs",
-              "ToolTip": "E:\\PRM-api\\Application\\ViewModels\\TypeDTO\\TypeCreateDTO.cs",
-              "RelativeToolTip": "Application\\ViewModels\\TypeDTO\\TypeCreateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "DocumentIndex": 3,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "E:\\PRM-api\\WebAPI\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AccountsController.cs",
+              "ToolTip": "E:\\PRM-api\\WebAPI\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\AccountsController.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwCUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T14:01:20.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TypeViewDTO.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Application\\ViewModels\\TypeDTO\\TypeViewDTO.cs",
-              "RelativeDocumentMoniker": "Application\\ViewModels\\TypeDTO\\TypeViewDTO.cs",
-              "ToolTip": "E:\\PRM-api\\Application\\ViewModels\\TypeDTO\\TypeViewDTO.cs",
-              "RelativeToolTip": "Application\\ViewModels\\TypeDTO\\TypeViewDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T14:01:06.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TypesController.cs",
-              "DocumentMoniker": "E:\\PRM-api\\WebAPI\\Controllers\\TypesController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\TypesController.cs",
-              "ToolTip": "E:\\PRM-api\\WebAPI\\Controllers\\TypesController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\TypesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T14:00:13.809Z",
+              "WhenOpened": "2024-07-08T13:57:00.609Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TypeService.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Application\\Services\\TypeService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\TypeService.cs",
-              "ToolTip": "E:\\PRM-api\\Application\\Services\\TypeService.cs",
-              "RelativeToolTip": "Application\\Services\\TypeService.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAEwD8AAAAdAAAA",
+              "Title": "BusinessPlansController.cs",
+              "DocumentMoniker": "E:\\PRM-api\\WebAPI\\Controllers\\BusinessPlansController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\BusinessPlansController.cs",
+              "ToolTip": "E:\\PRM-api\\WebAPI\\Controllers\\BusinessPlansController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\BusinessPlansController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:59:29.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ITypeService.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Application\\Interfaces\\ITypeService.cs",
-              "RelativeDocumentMoniker": "Application\\Interfaces\\ITypeService.cs",
-              "ToolTip": "E:\\PRM-api\\Application\\Interfaces\\ITypeService.cs",
-              "RelativeToolTip": "Application\\Interfaces\\ITypeService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:58:29.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TypeRepository.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Infrastructure\\Repositories\\TypeRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\TypeRepository.cs",
-              "ToolTip": "E:\\PRM-api\\Infrastructure\\Repositories\\TypeRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\TypeRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:58:04.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ITypeRepository.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Application\\Repositories\\ITypeRepository.cs",
-              "RelativeDocumentMoniker": "Application\\Repositories\\ITypeRepository.cs",
-              "ToolTip": "E:\\PRM-api\\Application\\Repositories\\ITypeRepository.cs",
-              "RelativeToolTip": "Application\\Repositories\\ITypeRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:55:59.076Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Type.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Domain\\Entitys\\Type.cs",
-              "RelativeDocumentMoniker": "Domain\\Entitys\\Type.cs",
-              "ToolTip": "E:\\PRM-api\\Domain\\Entitys\\Type.cs",
-              "RelativeToolTip": "Domain\\Entitys\\Type.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:54:33.539Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Application\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "Application\\IUnitOfWork.cs",
-              "ToolTip": "E:\\PRM-api\\Application\\IUnitOfWork.cs",
-              "RelativeToolTip": "Application\\IUnitOfWork.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:50:10.253Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ImageUpdateDTO.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Application\\ViewModels\\ImageDTO\\ImageUpdateDTO.cs",
-              "RelativeDocumentMoniker": "Application\\ViewModels\\ImageDTO\\ImageUpdateDTO.cs",
-              "ToolTip": "E:\\PRM-api\\Application\\ViewModels\\ImageDTO\\ImageUpdateDTO.cs",
-              "RelativeToolTip": "Application\\ViewModels\\ImageDTO\\ImageUpdateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:48:49.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ImageCreateDTO.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Application\\ViewModels\\ImageDTO\\ImageCreateDTO.cs",
-              "RelativeDocumentMoniker": "Application\\ViewModels\\ImageDTO\\ImageCreateDTO.cs",
-              "ToolTip": "E:\\PRM-api\\Application\\ViewModels\\ImageDTO\\ImageCreateDTO.cs",
-              "RelativeToolTip": "Application\\ViewModels\\ImageDTO\\ImageCreateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:48:16.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ImageViewDTO.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Application\\ViewModels\\ImageDTO\\ImageViewDTO.cs",
-              "RelativeDocumentMoniker": "Application\\ViewModels\\ImageDTO\\ImageViewDTO.cs",
-              "ToolTip": "E:\\PRM-api\\Application\\ViewModels\\ImageDTO\\ImageViewDTO.cs",
-              "RelativeToolTip": "Application\\ViewModels\\ImageDTO\\ImageViewDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:47:41.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ImagesController.cs",
-              "DocumentMoniker": "E:\\PRM-api\\WebAPI\\Controllers\\ImagesController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\ImagesController.cs",
-              "ToolTip": "E:\\PRM-api\\WebAPI\\Controllers\\ImagesController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\ImagesController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAA6wCYAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:47:00.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ImageService.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Application\\Services\\ImageService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\ImageService.cs",
-              "ToolTip": "E:\\PRM-api\\Application\\Services\\ImageService.cs",
-              "RelativeToolTip": "Application\\Services\\ImageService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:46:16.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IImageService.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Application\\Interfaces\\IImageService.cs",
-              "RelativeDocumentMoniker": "Application\\Interfaces\\IImageService.cs",
-              "ToolTip": "E:\\PRM-api\\Application\\Interfaces\\IImageService.cs",
-              "RelativeToolTip": "Application\\Interfaces\\IImageService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:45:40.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ImageRepository.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Infrastructure\\Repositories\\ImageRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\ImageRepository.cs",
-              "ToolTip": "E:\\PRM-api\\Infrastructure\\Repositories\\ImageRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\ImageRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:45:16.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IImageRepository.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Application\\Repositories\\IImageRepository.cs",
-              "RelativeDocumentMoniker": "Application\\Repositories\\IImageRepository.cs",
-              "ToolTip": "E:\\PRM-api\\Application\\Repositories\\IImageRepository.cs",
-              "RelativeToolTip": "Application\\Repositories\\IImageRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:44:52.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Image.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Domain\\Entitys\\Image.cs",
-              "RelativeDocumentMoniker": "Domain\\Entitys\\Image.cs",
-              "ToolTip": "E:\\PRM-api\\Domain\\Entitys\\Image.cs",
-              "RelativeToolTip": "Domain\\Entitys\\Image.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:43:51.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MapperConfigurationsProfile.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Infrastructure\\Mappers\\MapperConfigurationsProfile.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Mappers\\MapperConfigurationsProfile.cs",
-              "ToolTip": "E:\\PRM-api\\Infrastructure\\Mappers\\MapperConfigurationsProfile.cs",
-              "RelativeToolTip": "Infrastructure\\Mappers\\MapperConfigurationsProfile.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAUwBcAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:40:20.659Z",
+              "WhenOpened": "2024-07-08T13:54:02.963Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DenpendencyInjections.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Infrastructure\\DenpendencyInjections.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\DenpendencyInjections.cs",
-              "ToolTip": "E:\\PRM-api\\Infrastructure\\DenpendencyInjections.cs",
-              "RelativeToolTip": "Infrastructure\\DenpendencyInjections.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAuwBcAAABMAAAA",
+              "Title": "ImagesController.cs",
+              "DocumentMoniker": "E:\\PRM-api\\WebAPI\\Controllers\\ImagesController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\ImagesController.cs",
+              "ToolTip": "E:\\PRM-api\\WebAPI\\Controllers\\ImagesController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\ImagesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:37:29.666Z",
+              "WhenOpened": "2024-07-08T13:53:58.824Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Infrastructure\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\UnitOfWork.cs",
-              "ToolTip": "E:\\PRM-api\\Infrastructure\\UnitOfWork.cs",
-              "RelativeToolTip": "Infrastructure\\UnitOfWork.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAADwvxUAAAAJAAAA",
+              "DocumentIndex": 2,
+              "Title": "TypesController.cs",
+              "DocumentMoniker": "E:\\PRM-api\\WebAPI\\Controllers\\TypesController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\TypesController.cs",
+              "ToolTip": "E:\\PRM-api\\WebAPI\\Controllers\\TypesController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\TypesController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:37:23.874Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "E:\\PRM-api\\Infrastructure\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\AppDbContext.cs",
-              "ToolTip": "E:\\PRM-api\\Infrastructure\\AppDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\AppDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T13:37:09.825Z",
+              "WhenOpened": "2024-07-08T13:53:32.889Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 18,
+          "DockedWidth": 200,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -819,7 +492,17 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1304,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
             }
           ]
         }

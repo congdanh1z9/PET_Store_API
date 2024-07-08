@@ -1,13 +1,12 @@
 ﻿using Application.Interfaces;
 using Application.ViewModels.TypeDTO;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/type")]
     [ApiController]
-    public class TypesController : BaseController
+    public class TypesController : ControllerBase
     {
         private readonly ITypeService _typeService;
 
@@ -16,7 +15,7 @@ namespace WebAPI.Controllers
             _typeService = typeService;
         }
 
-        [HttpGet]
+        [HttpGet("list")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> GetAllTypes()
@@ -25,54 +24,56 @@ namespace WebAPI.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{id}")]
+        [HttpPost("detail")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetTypeById(int id)
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> GetTypeById([FromBody] TypeIdRequest request)
         {
-            var result = await _typeService.GetTypeById(id);
+            var result = await _typeService.GetTypeById(request.Id);
             if (!result.Success)
-                return NotFound(result);
+                return BadRequest(result);
             return Ok(result);
         }
 
-        [HttpGet("kind/{kindId}")]
+        [HttpPost("list-by-kind")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetTypesByKindId(int kindId)
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> GetTypesByKindId([FromBody] KindIdRequest request)
         {
-            var result = await _typeService.GetTypesByKindId(kindId);
+            var result = await _typeService.GetTypesByKindId(request.KindId);
             return Ok(result);
         }
 
-        [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
+        [HttpPost("create")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> CreateType([FromBody] TypeCreateDTO typeDto)
         {
             var result = await _typeService.CreateType(typeDto);
-            return CreatedAtAction(nameof(GetTypeById), new { id = result.Data.Id }, result);
-        }
-
-        [HttpPut("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdateType(int id, [FromBody] TypeUpdateDTO typeDto)
-        {
-            var result = await _typeService.UpdateType(id, typeDto);
             if (!result.Success)
-                return NotFound(result);
+                return BadRequest(result);
             return Ok(result);
         }
 
-        [HttpDelete("{id}")]
+        [HttpPost("update")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> DeleteType(int id)
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> UpdateType([FromBody] TypeUpdateRequest request)
         {
-            var result = await _typeService.DeleteType(id);
+            var result = await _typeService.UpdateType(request.Id, request.TypeDto);
             if (!result.Success)
-                return NotFound(result);
+                return BadRequest(result);
+            return Ok(result);
+        }
+
+        [HttpPost("delete")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> DeleteType([FromBody] TypeIdRequest request)
+        {
+            var result = await _typeService.DeleteType(request.Id);
+            if (!result.Success)
+                return BadRequest(result);
             return Ok(result);
         }
     }

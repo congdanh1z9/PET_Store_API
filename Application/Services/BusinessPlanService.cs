@@ -1,5 +1,4 @@
-﻿
-using Application.Interfaces;
+﻿using Application.Interfaces;
 using Application.ServiceReponses;
 using Application.ViewModels.BusinessPlanDTO;
 using AutoMapper;
@@ -23,6 +22,9 @@ namespace Application.Services
             var response = new ServiceResponse<List<BusinessPlanViewDTO>>();
             var businessPlans = await _unitOfWork.BusinessPlanRepository.GetAllAsync();
             response.Data = _mapper.Map<List<BusinessPlanViewDTO>>(businessPlans);
+            response.Success = true;
+            response.Message = "Business plans retrieved successfully.";
+             
             return response;
         }
 
@@ -33,10 +35,14 @@ namespace Application.Services
             if (businessPlan == null)
             {
                 response.Success = false;
-                response.Message = "BusinessPlan not found.";
+                response.Message = "Business plan not found.";
+                 
                 return response;
             }
             response.Data = _mapper.Map<BusinessPlanViewDTO>(businessPlan);
+            response.Success = true;
+            response.Message = "Business plan retrieved successfully.";
+             
             return response;
         }
 
@@ -47,6 +53,8 @@ namespace Application.Services
             await _unitOfWork.BusinessPlanRepository.AddAsync(businessPlan);
             await _unitOfWork.SaveChangeAsync();
             response.Data = _mapper.Map<BusinessPlanViewDTO>(businessPlan);
+            response.Success = true;
+            response.Message = "Business plan created successfully.";
             return response;
         }
 
@@ -57,13 +65,17 @@ namespace Application.Services
             if (businessPlan == null)
             {
                 response.Success = false;
-                response.Message = "BusinessPlan not found.";
+                response.Message = "Business plan not found.";
+                 
                 return response;
             }
             _mapper.Map(businessPlanDto, businessPlan);
             _unitOfWork.BusinessPlanRepository.Update(businessPlan);
             await _unitOfWork.SaveChangeAsync();
             response.Data = _mapper.Map<BusinessPlanViewDTO>(businessPlan);
+            response.Success = true;
+            response.Message = "Business plan updated successfully.";
+             
             return response;
         }
 
@@ -74,12 +86,16 @@ namespace Application.Services
             if (businessPlan == null)
             {
                 response.Success = false;
-                response.Message = "BusinessPlan not found.";
+                response.Message = "Business plan not found.";
+                 
                 return response;
             }
             await _unitOfWork.BusinessPlanRepository.DeleteAsync(businessPlan);
             await _unitOfWork.SaveChangeAsync();
             response.Data = true;
+            response.Success = true;
+            response.Message = "Business plan deleted successfully.";
+             
             return response;
         }
     }

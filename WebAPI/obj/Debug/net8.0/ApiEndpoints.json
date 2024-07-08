@@ -26,15 +26,15 @@
   },
   {
     "ContainingType": "WebAPI.Controllers.AccountsController",
-    "Method": "Inputname",
-    "RelativePath": "api/Accounts/inputname/{input}",
-    "HttpMethod": "GET",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Accounts/changepassword",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "input",
-        "Type": "System.String",
+        "Name": "changePasswordDTO",
+        "Type": "Application.ViewModels.AccountDTO.ChangePasswordDTO",
         "IsRequired": true
       }
     ],
@@ -43,17 +43,63 @@
         "Type": "System.Void",
         "MediaTypes": [],
         "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
       }
     ]
   },
   {
-    "ContainingType": "WebAPI.Controllers.BusinessPlansController",
-    "Method": "GetAllBusinessPlans",
-    "RelativePath": "api/BusinessPlans",
-    "HttpMethod": "GET",
+    "ContainingType": "WebAPI.Controllers.AccountsController",
+    "Method": "Login",
+    "RelativePath": "api/Accounts/login",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "loginDTO",
+        "Type": "Application.ViewModels.AccountDTO.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.AccountsController",
+    "Method": "Register",
+    "RelativePath": "api/Accounts/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDTO",
+        "Type": "Application.ViewModels.AccountDTO.RegisterDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Void",
@@ -74,7 +120,7 @@
   {
     "ContainingType": "WebAPI.Controllers.BusinessPlansController",
     "Method": "CreateBusinessPlan",
-    "RelativePath": "api/BusinessPlans",
+    "RelativePath": "api/v1/business-plan/create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -89,83 +135,7 @@
       {
         "Type": "System.Void",
         "MediaTypes": [],
-        "StatusCode": 201
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 400
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebAPI.Controllers.BusinessPlansController",
-    "Method": "GetBusinessPlanById",
-    "RelativePath": "api/BusinessPlans/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
         "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 404
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebAPI.Controllers.BusinessPlansController",
-    "Method": "UpdateBusinessPlan",
-    "RelativePath": "api/BusinessPlans/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "businessPlanDto",
-        "Type": "Application.ViewModels.BusinessPlanDTO.BusinessPlanUpdateDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 404
       },
       {
         "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
@@ -181,14 +151,14 @@
   {
     "ContainingType": "WebAPI.Controllers.BusinessPlansController",
     "Method": "DeleteBusinessPlan",
-    "RelativePath": "api/BusinessPlans/{id}",
-    "HttpMethod": "DELETE",
+    "RelativePath": "api/v1/business-plan/delete",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "request",
+        "Type": "Application.ViewModels.BusinessPlanDTO.BusinessPlanIdRequest",
         "IsRequired": true
       }
     ],
@@ -205,18 +175,80 @@
           "application/json",
           "text/json"
         ],
-        "StatusCode": 404
+        "StatusCode": 400
       }
     ]
   },
   {
-    "ContainingType": "WebAPI.Controllers.ImagesController",
-    "Method": "GetAllImages",
-    "RelativePath": "api/Images",
-    "HttpMethod": "GET",
+    "ContainingType": "WebAPI.Controllers.BusinessPlansController",
+    "Method": "GetBusinessPlanById",
+    "RelativePath": "api/v1/business-plan/detail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.ViewModels.BusinessPlanDTO.BusinessPlanIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.BusinessPlansController",
+    "Method": "GetAllBusinessPlans",
+    "RelativePath": "api/v1/business-plan/list",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.BusinessPlansController",
+    "Method": "UpdateBusinessPlan",
+    "RelativePath": "api/v1/business-plan/update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.ViewModels.BusinessPlanDTO.BusinessPlanUpdateRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Void",
@@ -237,7 +269,7 @@
   {
     "ContainingType": "WebAPI.Controllers.ImagesController",
     "Method": "CreateImage",
-    "RelativePath": "api/Images",
+    "RelativePath": "api/v1/image/create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -252,83 +284,7 @@
       {
         "Type": "System.Void",
         "MediaTypes": [],
-        "StatusCode": 201
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 400
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebAPI.Controllers.ImagesController",
-    "Method": "GetImageById",
-    "RelativePath": "api/Images/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
         "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 404
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebAPI.Controllers.ImagesController",
-    "Method": "UpdateImage",
-    "RelativePath": "api/Images/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "imageDto",
-        "Type": "Application.ViewModels.ImageDTO.ImageUpdateDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 404
       },
       {
         "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
@@ -344,14 +300,14 @@
   {
     "ContainingType": "WebAPI.Controllers.ImagesController",
     "Method": "DeleteImage",
-    "RelativePath": "api/Images/{id}",
-    "HttpMethod": "DELETE",
+    "RelativePath": "api/v1/image/delete",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "request",
+        "Type": "Application.ViewModels.ImageDTO.ImageIdRequest",
         "IsRequired": true
       }
     ],
@@ -368,21 +324,21 @@
           "application/json",
           "text/json"
         ],
-        "StatusCode": 404
+        "StatusCode": 400
       }
     ]
   },
   {
     "ContainingType": "WebAPI.Controllers.ImagesController",
-    "Method": "GetImagesByPostPetId",
-    "RelativePath": "api/Images/postpet/{postPetId}",
-    "HttpMethod": "GET",
+    "Method": "GetImageById",
+    "RelativePath": "api/v1/image/detail",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "postPetId",
-        "Type": "System.Int32",
+        "Name": "request",
+        "Type": "Application.ViewModels.ImageDTO.ImageIdRequest",
         "IsRequired": true
       }
     ],
@@ -391,13 +347,202 @@
         "Type": "System.Void",
         "MediaTypes": [],
         "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.ImagesController",
+    "Method": "GetAllImages",
+    "RelativePath": "api/v1/image/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.ImagesController",
+    "Method": "GetImagesByPostPetId",
+    "RelativePath": "api/v1/image/list-by-postpet",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.ViewModels.ImageDTO.PostPetIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.ImagesController",
+    "Method": "UpdateImage",
+    "RelativePath": "api/v1/image/update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.ViewModels.ImageDTO.ImageUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.TypesController",
+    "Method": "CreateType",
+    "RelativePath": "api/v1/type/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "typeDto",
+        "Type": "Application.ViewModels.TypeDTO.TypeCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.TypesController",
+    "Method": "DeleteType",
+    "RelativePath": "api/v1/type/delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.ViewModels.TypeDTO.TypeIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.TypesController",
+    "Method": "GetTypeById",
+    "RelativePath": "api/v1/type/detail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.ViewModels.TypeDTO.TypeIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
       }
     ]
   },
   {
     "ContainingType": "WebAPI.Controllers.TypesController",
     "Method": "GetAllTypes",
-    "RelativePath": "api/Types",
+    "RelativePath": "api/v1/type/list",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -421,46 +566,15 @@
   },
   {
     "ContainingType": "WebAPI.Controllers.TypesController",
-    "Method": "CreateType",
-    "RelativePath": "api/Types",
+    "Method": "GetTypesByKindId",
+    "RelativePath": "api/v1/type/list-by-kind",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "typeDto",
-        "Type": "Application.ViewModels.TypeDTO.TypeCreateDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 201
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 400
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebAPI.Controllers.TypesController",
-    "Method": "GetTypeById",
-    "RelativePath": "api/Types/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "request",
+        "Type": "Application.ViewModels.TypeDTO.KindIdRequest",
         "IsRequired": true
       }
     ],
@@ -477,26 +591,21 @@
           "application/json",
           "text/json"
         ],
-        "StatusCode": 404
+        "StatusCode": 400
       }
     ]
   },
   {
     "ContainingType": "WebAPI.Controllers.TypesController",
     "Method": "UpdateType",
-    "RelativePath": "api/Types/{id}",
-    "HttpMethod": "PUT",
+    "RelativePath": "api/v1/type/update",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "typeDto",
-        "Type": "Application.ViewModels.TypeDTO.TypeUpdateDTO",
+        "Name": "request",
+        "Type": "Application.ViewModels.TypeDTO.TypeUpdateRequest",
         "IsRequired": true
       }
     ],
@@ -505,15 +614,6 @@
         "Type": "System.Void",
         "MediaTypes": [],
         "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 404
       },
       {
         "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
@@ -523,59 +623,6 @@
           "text/json"
         ],
         "StatusCode": 400
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebAPI.Controllers.TypesController",
-    "Method": "DeleteType",
-    "RelativePath": "api/Types/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 404
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebAPI.Controllers.TypesController",
-    "Method": "GetTypesByKindId",
-    "RelativePath": "api/Types/kind/{kindId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "kindId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
       }
     ]
   }

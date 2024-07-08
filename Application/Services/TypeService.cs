@@ -22,6 +22,9 @@ namespace Application.Services
             var response = new ServiceResponse<List<TypeViewDTO>>();
             var types = await _unitOfWork.TypeRepository.GetAllAsync();
             response.Data = _mapper.Map<List<TypeViewDTO>>(types);
+            response.Success = true;
+            response.Message = "Types retrieved successfully.";
+             
             return response;
         }
 
@@ -33,9 +36,13 @@ namespace Application.Services
             {
                 response.Success = false;
                 response.Message = "Type not found.";
+                 
                 return response;
             }
             response.Data = _mapper.Map<TypeViewDTO>(type);
+            response.Success = true;
+            response.Message = "Type retrieved successfully.";
+             
             return response;
         }
 
@@ -44,6 +51,9 @@ namespace Application.Services
             var response = new ServiceResponse<List<TypeViewDTO>>();
             var types = await _unitOfWork.TypeRepository.GetTypesByKindId(kindId);
             response.Data = _mapper.Map<List<TypeViewDTO>>(types);
+            response.Success = true;
+            response.Message = "Types retrieved successfully.";
+             
             return response;
         }
 
@@ -54,6 +64,8 @@ namespace Application.Services
             await _unitOfWork.TypeRepository.AddAsync(type);
             await _unitOfWork.SaveChangeAsync();
             response.Data = _mapper.Map<TypeViewDTO>(type);
+            response.Success = true;
+            response.Message = "Type created successfully.";
             return response;
         }
 
@@ -65,12 +77,16 @@ namespace Application.Services
             {
                 response.Success = false;
                 response.Message = "Type not found.";
+                 
                 return response;
             }
             _mapper.Map(typeDto, type);
             await _unitOfWork.TypeRepository.UpdateAsync(type);
             await _unitOfWork.SaveChangeAsync();
             response.Data = _mapper.Map<TypeViewDTO>(type);
+            response.Success = true;
+            response.Message = "Type updated successfully.";
+             
             return response;
         }
 
@@ -82,11 +98,15 @@ namespace Application.Services
             {
                 response.Success = false;
                 response.Message = "Type not found.";
+                 
                 return response;
             }
             await _unitOfWork.TypeRepository.DeleteAsync(type);
             await _unitOfWork.SaveChangeAsync();
             response.Data = true;
+            response.Success = true;
+            response.Message = "Type deleted successfully.";
+             
             return response;
         }
     }
