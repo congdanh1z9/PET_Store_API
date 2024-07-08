@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRM-API\\PET_Store_API\\WebAPI\\WebAPI.csproj": {}
+    "D:\\PRM392\\GIT\\Pet_Store_API\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\PRM-API\\PET_Store_API\\Application\\Application.csproj": {
+    "D:\\PRM392\\GIT\\Pet_Store_API\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRM-API\\PET_Store_API\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\PRM392\\GIT\\Pet_Store_API\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\PRM-API\\PET_Store_API\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\thang\\.nuget\\packages\\",
-        "outputPath": "D:\\PRM-API\\PET_Store_API\\Application\\obj\\",
+        "projectPath": "D:\\PRM392\\GIT\\Pet_Store_API\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
+        "outputPath": "D:\\PRM392\\GIT\\Pet_Store_API\\Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\thang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PRM-API\\PET_Store_API\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\PRM-API\\PET_Store_API\\Domain\\Domain.csproj"
+              "D:\\PRM392\\GIT\\Pet_Store_API\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\PRM392\\GIT\\Pet_Store_API\\Domain\\Domain.csproj"
               }
             }
           }
@@ -38,11 +43,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -86,21 +86,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.106/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRM-API\\PET_Store_API\\Domain\\Domain.csproj": {
+    "D:\\PRM392\\GIT\\Pet_Store_API\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRM-API\\PET_Store_API\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\PRM392\\GIT\\Pet_Store_API\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\PRM-API\\PET_Store_API\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\thang\\.nuget\\packages\\",
-        "outputPath": "D:\\PRM-API\\PET_Store_API\\Domain\\obj\\",
+        "projectPath": "D:\\PRM392\\GIT\\Pet_Store_API\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
+        "outputPath": "D:\\PRM392\\GIT\\Pet_Store_API\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\thang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -108,6 +112,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -120,11 +125,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -152,21 +152,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.106/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRM-API\\PET_Store_API\\Infrastructure\\Infrastructures.csproj": {
+    "D:\\PRM392\\GIT\\Pet_Store_API\\Infrastructure\\Infrastructures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRM-API\\PET_Store_API\\Infrastructure\\Infrastructures.csproj",
+        "projectUniqueName": "D:\\PRM392\\GIT\\Pet_Store_API\\Infrastructure\\Infrastructures.csproj",
         "projectName": "Infrastructures",
-        "projectPath": "D:\\PRM-API\\PET_Store_API\\Infrastructure\\Infrastructures.csproj",
-        "packagesPath": "C:\\Users\\thang\\.nuget\\packages\\",
-        "outputPath": "D:\\PRM-API\\PET_Store_API\\Infrastructure\\obj\\",
+        "projectPath": "D:\\PRM392\\GIT\\Pet_Store_API\\Infrastructure\\Infrastructures.csproj",
+        "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
+        "outputPath": "D:\\PRM392\\GIT\\Pet_Store_API\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\thang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,14 +178,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PRM-API\\PET_Store_API\\Application\\Application.csproj": {
-                "projectPath": "D:\\PRM-API\\PET_Store_API\\Application\\Application.csproj"
+              "D:\\PRM392\\GIT\\Pet_Store_API\\Application\\Application.csproj": {
+                "projectPath": "D:\\PRM392\\GIT\\Pet_Store_API\\Application\\Application.csproj"
               }
             }
           }
@@ -190,11 +195,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -244,21 +244,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.106/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRM-API\\PET_Store_API\\WebAPI\\WebAPI.csproj": {
+    "D:\\PRM392\\GIT\\Pet_Store_API\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRM-API\\PET_Store_API\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "D:\\PRM392\\GIT\\Pet_Store_API\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "D:\\PRM-API\\PET_Store_API\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\thang\\.nuget\\packages\\",
-        "outputPath": "D:\\PRM-API\\PET_Store_API\\WebAPI\\obj\\",
+        "projectPath": "D:\\PRM392\\GIT\\Pet_Store_API\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
+        "outputPath": "D:\\PRM392\\GIT\\Pet_Store_API\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\thang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -266,14 +270,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PRM-API\\PET_Store_API\\Infrastructure\\Infrastructures.csproj": {
-                "projectPath": "D:\\PRM-API\\PET_Store_API\\Infrastructure\\Infrastructures.csproj"
+              "D:\\PRM392\\GIT\\Pet_Store_API\\Infrastructure\\Infrastructures.csproj": {
+                "projectPath": "D:\\PRM392\\GIT\\Pet_Store_API\\Infrastructure\\Infrastructures.csproj"
               }
             }
           }
@@ -282,11 +287,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -343,7 +343,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.106/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

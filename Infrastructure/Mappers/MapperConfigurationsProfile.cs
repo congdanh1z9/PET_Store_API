@@ -1,6 +1,8 @@
 ﻿using Application.ViewModels.AccountDTO;
 using Application.ViewModels.BusinessPlanDTO;
 using Application.ViewModels.ImageDTO;
+using Application.ViewModels.MeetDTO;
+using Application.ViewModels.PostDTO;
 using Application.ViewModels.TypeDTO;
 using AutoMapper;
 using Domain.Entitys;
@@ -25,6 +27,16 @@ namespace Infrastructures.Mappers
             CreateMap<Account, AccountViewDTO>().ReverseMap();
             CreateMap<RegisterDTO, Account>();
             CreateMap<ChangePasswordDTO, Account>();
+
+            CreateMap<Meet, CreateMeetDTO>().ReverseMap();
+            CreateMap<Meet, UpdateMeetDTO>().ReverseMap();
+            CreateMap<Meet, ViewMeetDTO>().ReverseMap();
+            CreateMap<List<Meet>, List<ViewMeetDTO>>().ReverseMap();
+
+            CreateMap<PostPet, CreatePostDTO>().ReverseMap();
+            CreateMap<Meet, UpdatePostDTO>().ReverseMap();
+            CreateMap<Meet, ViewPostDTO>().ReverseMap();
+            CreateMap<List<Meet>, List<ViewPostDTO>>().ReverseMap();
         }
 
     }
