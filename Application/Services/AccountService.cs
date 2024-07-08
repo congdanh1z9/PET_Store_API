@@ -32,6 +32,8 @@ namespace Application.Services
                 return response;
             }
 
+            response.Success = true;
+            response.Message = "Login successfully.";
             response.Data = _mapper.Map<AccountViewDTO>(account);
             return response;
         }
@@ -69,7 +71,8 @@ namespace Application.Services
             await _unitOfWork.AccountRepository.AddAsync(newAccount);
             await _unitOfWork.SaveChangeAsync();
 
-            response.Data = "Registration successful.";
+            response.Success = true;
+            response.Message = "Registration successful.";
             return response;
         }
 

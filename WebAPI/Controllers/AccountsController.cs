@@ -37,10 +37,10 @@ namespace WebAPI.Controllers
 
             if (!result.Success)
             {
-                return BadRequest(new { message = result.Message });
+                return BadRequest(new { status = 400, message = result.Message });
             }
 
-            return Ok(result);
+            return Ok(new { status =200 , message = result.Message, account = result.Data });
         }
 
         [HttpPost("register")]
@@ -52,10 +52,10 @@ namespace WebAPI.Controllers
 
             if (!result.Success)
             {
-                return BadRequest(new { message = result.Message });
+                return BadRequest(new { status = 400 , message = result.Message });
             }
 
-            return Ok(new { message = result.Data });
+            return Ok(new { status = 200 , message = result.Message });
         }
 
         [HttpPost("changepassword")]
