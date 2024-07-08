@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\PRM-api\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|e:\\prm-api\\webapi\\controllers\\businessplanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\businessplanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|e:\\prm-api\\webapi\\controllers\\imagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\imagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|e:\\prm-api\\webapi\\controllers\\typescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\typescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|e:\\prm-api\\webapi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EFC569D-91D5-4321-8DB4-D0F3AF25E498}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 88,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -375,58 +358,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountsController.cs",
-              "DocumentMoniker": "E:\\PRM-api\\WebAPI\\Controllers\\AccountsController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AccountsController.cs",
-              "ToolTip": "E:\\PRM-api\\WebAPI\\Controllers\\AccountsController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\AccountsController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAQwCUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T13:57:00.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BusinessPlansController.cs",
-              "DocumentMoniker": "E:\\PRM-api\\WebAPI\\Controllers\\BusinessPlansController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\BusinessPlansController.cs",
-              "ToolTip": "E:\\PRM-api\\WebAPI\\Controllers\\BusinessPlansController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\BusinessPlansController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T13:54:02.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ImagesController.cs",
-              "DocumentMoniker": "E:\\PRM-api\\WebAPI\\Controllers\\ImagesController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\ImagesController.cs",
-              "ToolTip": "E:\\PRM-api\\WebAPI\\Controllers\\ImagesController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\ImagesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T13:53:58.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TypesController.cs",
-              "DocumentMoniker": "E:\\PRM-api\\WebAPI\\Controllers\\TypesController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\TypesController.cs",
-              "ToolTip": "E:\\PRM-api\\WebAPI\\Controllers\\TypesController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\TypesController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T13:53:32.889Z",
-              "EditorCaption": ""
             }
           ]
         },

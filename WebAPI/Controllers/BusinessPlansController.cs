@@ -19,7 +19,7 @@ namespace WebAPI.Controllers
 
         [HttpGet("list")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        
         public async Task<IActionResult> GetAllBusinessPlans()
         {
             var result = await _businessPlanService.GetAllBusinessPlans();
@@ -28,7 +28,7 @@ namespace WebAPI.Controllers
 
         [HttpPost("detail")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        
         public async Task<IActionResult> GetBusinessPlanById([FromBody] BusinessPlanIdRequest request)
         {
             var result = await _businessPlanService.GetBusinessPlanById(request.Id);
@@ -41,7 +41,7 @@ namespace WebAPI.Controllers
 
         [HttpPost("create")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        
         public async Task<IActionResult> CreateBusinessPlan([FromBody] BusinessPlanCreateDTO businessPlanDto)
         {
             var result = await _businessPlanService.CreateBusinessPlan(businessPlanDto);
@@ -54,7 +54,7 @@ namespace WebAPI.Controllers
 
         [HttpPost("update")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        
         public async Task<IActionResult> UpdateBusinessPlan([FromBody] BusinessPlanUpdateRequest request)
         {
             var result = await _businessPlanService.UpdateBusinessPlan(request.Id, request.BusinessPlanDto);
@@ -67,7 +67,7 @@ namespace WebAPI.Controllers
 
         [HttpPost("delete")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        
         public async Task<IActionResult> DeleteBusinessPlan([FromBody] BusinessPlanIdRequest request)
         {
             var result = await _businessPlanService.DeleteBusinessPlan(request.Id);

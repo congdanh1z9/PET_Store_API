@@ -23,6 +23,7 @@ namespace Application.Services
             var images = await _unitOfWork.ImageRepository.GetAllAsync();
             response.Data = _mapper.Map<List<ImageViewDTO>>(images);
             response.Success = true;
+            response.Status = 200;
             response.Message = "Images retrieved successfully.";
              
             return response;
@@ -35,12 +36,14 @@ namespace Application.Services
             if (image == null)
             {
                 response.Success = false;
+                response.Status = 400;
                 response.Message = "Image not found.";
                  
                 return response;
             }
             response.Data = _mapper.Map<ImageViewDTO>(image);
             response.Success = true;
+            response.Status = 200;
             response.Message = "Image retrieved successfully.";
              
             return response;
@@ -53,7 +56,7 @@ namespace Application.Services
             response.Data = _mapper.Map<List<ImageViewDTO>>(images);
             response.Success = true;
             response.Message = "Images retrieved successfully.";
-             
+            response.Status = 200;
             return response;
         }
 
@@ -65,6 +68,7 @@ namespace Application.Services
             await _unitOfWork.SaveChangeAsync();
             response.Data = _mapper.Map<ImageViewDTO>(image);
             response.Success = true;
+            response.Status = 200;
             response.Message = "Image created successfully.";
             return response;
         }
@@ -77,7 +81,7 @@ namespace Application.Services
             {
                 response.Success = false;
                 response.Message = "Image not found.";
-                 
+                response.Status = 400;
                 return response;
             }
             _mapper.Map(imageDto, image);
@@ -85,6 +89,7 @@ namespace Application.Services
             await _unitOfWork.SaveChangeAsync();
             response.Data = _mapper.Map<ImageViewDTO>(image);
             response.Success = true;
+            response.Status = 200;
             response.Message = "Image updated successfully.";
              
             return response;
@@ -98,13 +103,14 @@ namespace Application.Services
             {
                 response.Success = false;
                 response.Message = "Image not found.";
-                 
+                response.Status = 400;
                 return response;
             }
             await _unitOfWork.ImageRepository.DeleteAsync(image);
             await _unitOfWork.SaveChangeAsync();
             response.Data = true;
             response.Success = true;
+            response.Status = 200;
             response.Message = "Image deleted successfully.";
              
             return response;
