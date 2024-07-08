@@ -22,10 +22,13 @@ namespace Application.Services
             var response = new ServiceResponse<List<ImageViewDTO>>();
             var images = await _unitOfWork.ImageRepository.GetAllAsync();
             response.Data = _mapper.Map<List<ImageViewDTO>>(images);
+<<<<<<< HEAD
             response.Success = true;
             response.Status = 200;
             response.Message = "Images retrieved successfully.";
              
+=======
+>>>>>>> parent of 62ba2c9 (update api)
             return response;
         }
 
@@ -38,14 +41,16 @@ namespace Application.Services
                 response.Success = false;
                 response.Status = 400;
                 response.Message = "Image not found.";
-                 
                 return response;
             }
             response.Data = _mapper.Map<ImageViewDTO>(image);
+<<<<<<< HEAD
             response.Success = true;
             response.Status = 200;
             response.Message = "Image retrieved successfully.";
              
+=======
+>>>>>>> parent of 62ba2c9 (update api)
             return response;
         }
 
@@ -54,9 +59,12 @@ namespace Application.Services
             var response = new ServiceResponse<List<ImageViewDTO>>();
             var images = await _unitOfWork.ImageRepository.GetImagesByPostPetId(postPetId);
             response.Data = _mapper.Map<List<ImageViewDTO>>(images);
+<<<<<<< HEAD
             response.Success = true;
             response.Message = "Images retrieved successfully.";
             response.Status = 200;
+=======
+>>>>>>> parent of 62ba2c9 (update api)
             return response;
         }
 
@@ -67,9 +75,12 @@ namespace Application.Services
             await _unitOfWork.ImageRepository.AddAsync(image);
             await _unitOfWork.SaveChangeAsync();
             response.Data = _mapper.Map<ImageViewDTO>(image);
+<<<<<<< HEAD
             response.Success = true;
             response.Status = 200;
             response.Message = "Image created successfully.";
+=======
+>>>>>>> parent of 62ba2c9 (update api)
             return response;
         }
 
@@ -81,17 +92,23 @@ namespace Application.Services
             {
                 response.Success = false;
                 response.Message = "Image not found.";
+<<<<<<< HEAD
                 response.Status = 400;
+=======
+>>>>>>> parent of 62ba2c9 (update api)
                 return response;
             }
             _mapper.Map(imageDto, image);
             await _unitOfWork.ImageRepository.UpdateAsync(image);
             await _unitOfWork.SaveChangeAsync();
             response.Data = _mapper.Map<ImageViewDTO>(image);
+<<<<<<< HEAD
             response.Success = true;
             response.Status = 200;
             response.Message = "Image updated successfully.";
              
+=======
+>>>>>>> parent of 62ba2c9 (update api)
             return response;
         }
 
@@ -103,16 +120,22 @@ namespace Application.Services
             {
                 response.Success = false;
                 response.Message = "Image not found.";
+<<<<<<< HEAD
                 response.Status = 400;
+=======
+>>>>>>> parent of 62ba2c9 (update api)
                 return response;
             }
             await _unitOfWork.ImageRepository.DeleteAsync(image);
             await _unitOfWork.SaveChangeAsync();
             response.Data = true;
+<<<<<<< HEAD
             response.Success = true;
             response.Status = 200;
             response.Message = "Image deleted successfully.";
              
+=======
+>>>>>>> parent of 62ba2c9 (update api)
             return response;
         }
     }

@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿
+using Application.Interfaces;
 using Application.ServiceReponses;
 using Application.ViewModels.BusinessPlanDTO;
 using AutoMapper;
@@ -22,9 +23,12 @@ namespace Application.Services
             var response = new ServiceResponse<List<BusinessPlanViewDTO>>();
             var businessPlans = await _unitOfWork.BusinessPlanRepository.GetAllAsync();
             response.Data = _mapper.Map<List<BusinessPlanViewDTO>>(businessPlans);
+<<<<<<< HEAD
             response.Success = true;
             response.Status = 200;
             response.Message = "Business plans retrieved successfully.";
+=======
+>>>>>>> parent of 62ba2c9 (update api)
             return response;
         }
 
@@ -35,6 +39,7 @@ namespace Application.Services
             if (businessPlan == null)
             {
                 response.Success = false;
+<<<<<<< HEAD
                 response.Status = 400;
                 response.Message = "Business plan not found.";
                  
@@ -45,6 +50,12 @@ namespace Application.Services
             response.Status = 200;
             response.Message = "Business plan retrieved successfully.";
              
+=======
+                response.Message = "BusinessPlan not found.";
+                return response;
+            }
+            response.Data = _mapper.Map<BusinessPlanViewDTO>(businessPlan);
+>>>>>>> parent of 62ba2c9 (update api)
             return response;
         }
 
@@ -55,9 +66,12 @@ namespace Application.Services
             await _unitOfWork.BusinessPlanRepository.AddAsync(businessPlan);
             await _unitOfWork.SaveChangeAsync();
             response.Data = _mapper.Map<BusinessPlanViewDTO>(businessPlan);
+<<<<<<< HEAD
             response.Success = true;
             response.Status = 200;
             response.Message = "Business plan created successfully.";
+=======
+>>>>>>> parent of 62ba2c9 (update api)
             return response;
         }
 
@@ -68,19 +82,26 @@ namespace Application.Services
             if (businessPlan == null)
             {
                 response.Success = false;
+<<<<<<< HEAD
                 response.Status = 400;
                 response.Message = "Business plan not found.";
                  
+=======
+                response.Message = "BusinessPlan not found.";
+>>>>>>> parent of 62ba2c9 (update api)
                 return response;
             }
             _mapper.Map(businessPlanDto, businessPlan);
             _unitOfWork.BusinessPlanRepository.Update(businessPlan);
             await _unitOfWork.SaveChangeAsync();
             response.Data = _mapper.Map<BusinessPlanViewDTO>(businessPlan);
+<<<<<<< HEAD
             response.Success = true;
             response.Status = 200;
             response.Message = "Business plan updated successfully.";
              
+=======
+>>>>>>> parent of 62ba2c9 (update api)
             return response;
         }
 
@@ -91,18 +112,25 @@ namespace Application.Services
             if (businessPlan == null)
             {
                 response.Success = false;
+<<<<<<< HEAD
                 response.Status = 400;
                 response.Message = "Business plan not found.";
                  
+=======
+                response.Message = "BusinessPlan not found.";
+>>>>>>> parent of 62ba2c9 (update api)
                 return response;
             }
             await _unitOfWork.BusinessPlanRepository.DeleteAsync(businessPlan);
             await _unitOfWork.SaveChangeAsync();
             response.Data = true;
+<<<<<<< HEAD
             response.Success = true;
             response.Status = 200;
             response.Message = "Business plan deleted successfully.";
              
+=======
+>>>>>>> parent of 62ba2c9 (update api)
             return response;
         }
     }

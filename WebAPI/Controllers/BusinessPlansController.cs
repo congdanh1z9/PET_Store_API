@@ -2,13 +2,12 @@
 using Application.ViewModels.BusinessPlanDTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
 {
-    [Route("api/v1/business-plan")]
+    [Route("api/[controller]")]
     [ApiController]
-    public class BusinessPlansController : ControllerBase
+    public class BusinessPlansController : BaseController
     {
         private readonly IBusinessPlanService _businessPlanService;
 
@@ -17,7 +16,7 @@ namespace WebAPI.Controllers
             _businessPlanService = businessPlanService;
         }
 
-        [HttpGet("list")]
+        [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         
         public async Task<IActionResult> GetAllBusinessPlans()
@@ -26,39 +25,62 @@ namespace WebAPI.Controllers
             return Ok(result);
         }
 
-        [HttpPost("detail")]
+        [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+<<<<<<< HEAD
         
         public async Task<IActionResult> GetBusinessPlanById([FromBody] BusinessPlanIdRequest request)
+=======
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetBusinessPlanById(int id)
+>>>>>>> parent of 62ba2c9 (update api)
         {
-            var result = await _businessPlanService.GetBusinessPlanById(request.Id);
+            var result = await _businessPlanService.GetBusinessPlanById(id);
             if (!result.Success)
-            {
-                return BadRequest(result);
-            }
+                return NotFound(result);
             return Ok(result);
         }
 
+<<<<<<< HEAD
         [HttpPost("create")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         
+=======
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+>>>>>>> parent of 62ba2c9 (update api)
         public async Task<IActionResult> CreateBusinessPlan([FromBody] BusinessPlanCreateDTO businessPlanDto)
         {
             var result = await _businessPlanService.CreateBusinessPlan(businessPlanDto);
+            return CreatedAtAction(nameof(GetBusinessPlanById), new { id = result.Data.Id }, result);
+        }
+
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> UpdateBusinessPlan(int id, [FromBody] BusinessPlanUpdateDTO businessPlanDto)
+        {
+            var result = await _businessPlanService.UpdateBusinessPlan(id, businessPlanDto);
             if (!result.Success)
-            {
-                return BadRequest(result);
-            }
+                return NotFound(result);
             return Ok(result);
         }
 
-        [HttpPost("update")]
+        [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+<<<<<<< HEAD
         
         public async Task<IActionResult> UpdateBusinessPlan([FromBody] BusinessPlanUpdateRequest request)
+=======
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> DeleteBusinessPlan(int id)
+>>>>>>> parent of 62ba2c9 (update api)
         {
-            var result = await _businessPlanService.UpdateBusinessPlan(request.Id, request.BusinessPlanDto);
+            var result = await _businessPlanService.DeleteBusinessPlan(id);
             if (!result.Success)
+<<<<<<< HEAD
             {
                 return BadRequest(result);
             }
@@ -75,6 +97,9 @@ namespace WebAPI.Controllers
             {
                 return BadRequest(result);
             }
+=======
+                return NotFound(result);
+>>>>>>> parent of 62ba2c9 (update api)
             return Ok(result);
         }
     }
