@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
 {
-	[Route("api/v1/business-plan")]
+	[Route("api/business-plan")]
 	[ApiController]
 	public class BusinessPlansController : BaseController
 	{
@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpPost("get-by-id")]
+		[HttpGet("get-by-id")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> GetBusinessPlanById([FromBody] BusinessPlanIdRequest request)
 		{
@@ -40,7 +40,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpPost("update")]
+		[HttpPut("update")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> UpdateBusinessPlan([FromBody] BusinessPlanUpdateRequest request)
 		{
@@ -48,7 +48,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpPost("delete")]
+		[HttpDelete("delete")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> DeleteBusinessPlan([FromBody] BusinessPlanIdRequest request)
 		{

@@ -25,7 +25,6 @@ namespace Application.Services
 			response.Success = true;
 			response.Status = "200";
 			response.Message = "Business plans retrieved successfully.";
-			//return
 			return response;
 		}
 
@@ -36,7 +35,7 @@ namespace Application.Services
 			if (businessPlan == null)
 			{
 				response.Success = false;
-				response.Status = "404";
+				response.Status = "400";
 				response.Message = "Business plan not found.";
 				return response;
 			}
@@ -55,7 +54,7 @@ namespace Application.Services
 			await _unitOfWork.SaveChangeAsync();
 			response.Data = _mapper.Map<BusinessPlanViewDTO>(businessPlan);
 			response.Success = true;
-			response.Status = "201";
+			response.Status = "200";
 			response.Message = "Business plan created successfully.";
 			return response;
 		}
@@ -67,7 +66,7 @@ namespace Application.Services
 			if (businessPlan == null)
 			{
 				response.Success = false;
-				response.Status = "404";
+				response.Status = "400";
 				response.Message = "Business plan not found.";
 				return response;
 			}
@@ -88,7 +87,7 @@ namespace Application.Services
 			if (businessPlan == null)
 			{
 				response.Success = false;
-				response.Status = "404";
+				response.Status = "400";
 				response.Message = "Business plan not found.";
 				return response;
 			}

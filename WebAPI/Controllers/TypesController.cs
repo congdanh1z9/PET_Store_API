@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
 {
-	[Route("api/v1/types")]
+	[Route("api/type")]
 	[ApiController]
 	public class TypesController : BaseController
 	{
@@ -25,7 +25,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpPost("get-by-id")]
+		[HttpGet("get-by-id")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> GetTypeById([FromBody] TypeIdRequest request)
 		{
@@ -33,7 +33,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpPost("get-by-kind-id")]
+		[HttpGet("get-by-kind-id")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> GetTypesByKindId([FromBody] KindIdRequest request)
 		{
@@ -49,7 +49,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpPost("update")]
+		[HttpPut("update")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> UpdateType([FromBody] TypeUpdateRequest request)
 		{
@@ -59,7 +59,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpPost("delete")]
+		[HttpDelete("delete")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> DeleteType([FromBody] TypeIdRequest request)
 		{

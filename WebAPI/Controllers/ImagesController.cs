@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
 {
-	[Route("api/v1/image")]
+	[Route("api/image")]
 	[ApiController]
 	public class ImagesController : BaseController
 	{
@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpPost("get-by-id")]
+		[HttpGet("get-by-id")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> GetImageById([FromBody] ImageIdRequest request)
 		{
@@ -32,7 +32,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpPost("get-by-post-pet-id")]
+		[HttpGet("get-by-post-pet-id")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> GetImagesByPostPetId([FromBody] PostPetIdRequest request)
 		{
@@ -48,7 +48,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpPost("update")]
+		[HttpPut("update")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> UpdateImage([FromBody] ImageUpdateRequest request)
 		{
@@ -56,7 +56,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpPost("delete")]
+		[HttpDelete("delete")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> DeleteImage([FromBody] ImageIdRequest request)
 		{

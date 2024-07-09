@@ -36,7 +36,7 @@ namespace Application.Services
 			{
 				response.Success = false;
 				response.Message = "Type not found.";
-				response.Status = "404";
+				response.Status = "400";
 				return response;
 			}
 			response.Data = _mapper.Map<TypeViewDTO>(type);
@@ -54,7 +54,7 @@ namespace Application.Services
 			{
 				response.Success = false;
 				response.Message = "No types found for the given KindId.";
-				response.Status = "404";
+				response.Status = "400";
 				return response;
 			}
 			response.Data = _mapper.Map<List<TypeViewDTO>>(types);
@@ -72,7 +72,7 @@ namespace Application.Services
 			await _unitOfWork.SaveChangeAsync();
 			response.Data = _mapper.Map<TypeViewDTO>(type);
 			response.Success = true;
-			response.Status = "201";
+			response.Status = "200";
 			response.Message = "Type created successfully.";
 			return response;
 		}
@@ -85,7 +85,7 @@ namespace Application.Services
 			{
 				response.Success = false;
 				response.Message = "Type not found.";
-				response.Status = "404";
+				response.Status = "400";
 				return response;
 			}
 			_mapper.Map(typeDto, type);
@@ -106,7 +106,7 @@ namespace Application.Services
 			{
 				response.Success = false;
 				response.Message = "Type not found.";
-				response.Status = "404";
+				response.Status = "400";
 				return response;
 			}
 			await _unitOfWork.TypeRepository.DeleteAsync(type);
