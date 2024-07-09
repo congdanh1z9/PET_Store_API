@@ -28,12 +28,11 @@ namespace Application.Services
             if (account == null)
             {
                 response.Success = false;
+                response.Status = "400";
                 response.Message = "Invalid email or password.";
                 return response;
             }
 
-            response.Success = true;
-            response.Message = "Login successfully.";
             response.Data = _mapper.Map<AccountViewDTO>(account);
             return response;
         }
@@ -47,6 +46,7 @@ namespace Application.Services
             if (existingAccount != null)
             {
                 response.Success = false;
+                response.Status = "400";
                 response.Message = "Email already registered.";
                 return response;
             }
@@ -55,6 +55,7 @@ namespace Application.Services
             if (registerDTO.password != registerDTO.confirmPassword)
             {
                 response.Success = false;
+                response.Status = "400";
                 response.Message = "Passwords do not match.";
                 return response;
             }
@@ -71,12 +72,11 @@ namespace Application.Services
             await _unitOfWork.AccountRepository.AddAsync(newAccount);
             await _unitOfWork.SaveChangeAsync();
 
-            response.Success = true;
-            response.Message = "Registration successful.";
+            response.Data = "Registration successful.";
             return response;
         }
 
-        public async Task<ServiceResponse<string>> ChangePassword(string email, string oldPassword, string newPassword)
+        public async Task<ServiceResponse<string>> ChangePassword(string email, string oldPassword, string newPassword, string confirmPassword)
         {
             var response = new ServiceResponse<string>();
 
@@ -85,6 +85,7 @@ namespace Application.Services
             if (account == null)
             {
                 response.Success = false;
+                response.Status = "400";
                 response.Message = "Invalid email or password.";
                 return response;
             }
@@ -92,7 +93,16 @@ namespace Application.Services
             if (oldPassword == newPassword)
             {
                 response.Success = false;
+                response.Status = "400";
                 response.Message = "New password must be different from the old password.";
+                return response;
+            }
+
+            if (newPassword != confirmPassword)
+            {
+                response.Success = false;
+                response.Status = "400";
+                response.Message = "New password and confirm password do not match.";
                 return response;
             }
 
@@ -103,6 +113,7 @@ namespace Application.Services
             response.Data = "Password changed successfully.";
             return response;
         }
+
 
         public async Task<ServiceResponse<List<AccountViewDTO>>> ViewAllAccounts()
         {

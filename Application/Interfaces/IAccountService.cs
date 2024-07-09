@@ -9,7 +9,7 @@ namespace Application.Interfaces
     {
         Task<ServiceResponse<AccountViewDTO>> Login(string email, string password);
         Task<ServiceResponse<string>> Register(RegisterDTO registerDTO);
-        Task<ServiceResponse<string>> ChangePassword(string email, string oldPassword, string newPassword);
+        Task<ServiceResponse<string>> ChangePassword(string email, string oldPassword, string newPassword , string confirmPassword);
         Task<ServiceResponse<List<AccountViewDTO>>> ViewAllAccounts();
     }
 }
