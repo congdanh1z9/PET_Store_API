@@ -30,47 +30,35 @@ namespace WebAPI.Controllers
 
         [HttpPost("login")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        //[ProducesResponseType(StatusCodes.Status400BadRequest)]//
         public async Task<IActionResult> Login(LoginDTO loginDTO)
         {
             var result = await _accountService.Login(loginDTO.email, loginDTO.password);
 
-            if (!result.Success)
-            {
-                return BadRequest(new { status = 400, message = result.Message });
-            }
+            //if (!result.Success)
+            //{//
+                //return BadRequest(new { message = result.Message });//
+            //}//
 
-            return Ok(new { status =200 , message = result.Message, account = result.Data });
+            return Ok(result);
         }
 
         [HttpPost("register")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Register(RegisterDTO registerDTO)
         {
             var result = await _accountService.Register(registerDTO);
 
-            if (!result.Success)
-            {
-                return BadRequest(new { status = 400 , message = result.Message });
-            }
-
-            return Ok(new { status = 200 , message = result.Message });
+            return Ok(result);
         }
 
         [HttpPost("changepassword")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> ChangePassword(ChangePasswordDTO changePasswordDTO)
         {
-            var result = await _accountService.ChangePassword(changePasswordDTO.email, changePasswordDTO.oldPassword, changePasswordDTO.newPassword);
+            var result = await _accountService.ChangePassword(changePasswordDTO.email, changePasswordDTO.oldPassword, changePasswordDTO.newPassword , changePasswordDTO.confirmPassword);
 
-            if (!result.Success)
-            {
-                return BadRequest(new { message = result.Message });
-            }
-
-            return Ok(new { message = result.Data });
+            return Ok(result);
         }
     }
 }
