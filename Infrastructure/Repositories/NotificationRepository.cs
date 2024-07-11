@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace Infrastructures.Repositories
 {
-    public class MeetRepository : GenericRepository<Meet>, IMeetRepository
+    public class NotificationRepository : GenericRepository<Notifition>, INotificationRepository
     {
-        public MeetRepository(AppDbContext context, ICurrentTime timeService, IClaimsService claimsService) : base(context, timeService, claimsService)
+        public NotificationRepository(AppDbContext context, ICurrentTime timeService, IClaimsService claimsService) : base(context, timeService, claimsService)
         {
         }
     }

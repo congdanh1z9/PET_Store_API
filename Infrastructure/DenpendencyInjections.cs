@@ -29,8 +29,8 @@ namespace Infrastructures
             services.AddScoped<ITypeRepository, TypeRepository>();
             services.AddScoped<ITypeService, TypeService>();
 
-            services.AddScoped<IMeetRepository, MeetRepository>();
-            services.AddScoped<IMeetService, MeetService>();
+            services.AddScoped<INotificationRepository, NotificationRepository>();
+            services.AddScoped<INotificationService, NotificationService>();
 
             services.AddScoped<IPostRepository, PostRepository>();
             services.AddScoped<IPostService, PostService>();

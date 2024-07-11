@@ -28,15 +28,15 @@ namespace Infrastructures.Mappers
             CreateMap<RegisterDTO, Account>();
             CreateMap<ChangePasswordDTO, Account>();
 
-            CreateMap<Meet, CreateMeetDTO>().ReverseMap();
-            CreateMap<Meet, UpdateMeetDTO>().ReverseMap();
-            CreateMap<Meet, ViewMeetDTO>().ReverseMap();
-            CreateMap<List<Meet>, List<ViewMeetDTO>>().ReverseMap();
+            CreateMap<Notifition, CreateMeetDTO>().ReverseMap();
+            CreateMap<Notifition, UpdateMeetDTO>().ReverseMap();
+            CreateMap<Notifition, ViewMeetDTO>().ReverseMap();
+            CreateMap<List<Notifition>, List<ViewMeetDTO>>().ReverseMap();
 
             CreateMap<PostPet, CreatePostDTO>().ReverseMap();
-            CreateMap<Meet, UpdatePostDTO>().ReverseMap();
-            CreateMap<Meet, ViewPostDTO>().ReverseMap();
-            CreateMap<List<Meet>, List<ViewPostDTO>>().ReverseMap();
+            CreateMap<PostPet, UpdatePostDTO>().ReverseMap();
+            CreateMap<PostPet, ViewPostDTO>().ReverseMap();
+            CreateMap<List<PostPet>, List<ViewPostDTO>>().ReverseMap();
         }
 
     }
