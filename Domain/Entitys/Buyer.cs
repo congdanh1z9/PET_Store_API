@@ -14,8 +14,7 @@ namespace Domain.Entitys
         public string? Address { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public string? ProfileImage { get; set; }
-
         public virtual Account? Account { get; set; }
-        public virtual IEnumerable<Meet> Meets { get; set; }
+        public virtual Notifition? Notifition { get; set; }
     }
 }

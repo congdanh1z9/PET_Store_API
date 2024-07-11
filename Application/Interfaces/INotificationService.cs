@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces
 {
-    public interface IMeetService
+    public interface INotificationService
     {
         Task<ServiceResponse<IEnumerable<ViewMeetDTO>>> GetMeetsAsync();
         Task<ServiceResponse<ViewMeetDTO>> GetMeetByIdAsync(int Id);

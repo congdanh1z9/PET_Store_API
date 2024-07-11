@@ -9,21 +9,16 @@ using System.Threading.Tasks;
 
 namespace Infrastructures.FluentAPIs
 {
-    public class MeetConfiguration : IEntityTypeConfiguration<Meet>
+    public class NotificationConfiguration : IEntityTypeConfiguration<Notifition>
     {
-        public void Configure(EntityTypeBuilder<Meet> builder)
+        public void Configure(EntityTypeBuilder<Notifition> builder)
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
 
             builder.HasOne(x => x.Buyer)
-                .WithMany(x => x.Meets)
-                .HasForeignKey(x => x.BuyerID);
-
-            builder.HasOne(x => x.PostPet)
-                .WithMany(x => x.Meets)
-                .HasForeignKey(x => x.PostPetID);
-
+                .WithOne(x => x.Notifition)
+                .HasForeignKey<Notifition>(x => x.BuyerId);
         }
     }
 }

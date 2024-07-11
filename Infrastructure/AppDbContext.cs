@@ -17,7 +17,7 @@ namespace Infrastructures
         public DbSet<Buyer> Buyers { get; set; }
         public DbSet<Shop> Shops { get; set; }
         public DbSet<Image> Images { get; set; }
-        public DbSet<Meet> Meets { get; set; }
+        public DbSet<Notifition> Notifitions { get; set; }
         public DbSet<PostPet> PostPets { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

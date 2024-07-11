@@ -1,16 +1,19 @@
 ﻿using Application.Interfaces;
 using Application.ServiceReponses;
 using Application.ViewModels.PostDTO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AutoMapper;
 
 namespace Application.Services
 {
     public class PostService : IPostService
     {
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
+        public PostService(IUnitOfWork unitOfWork, IMapper mapper) 
+        {
+            _mapper = mapper;
+            _unitOfWork = unitOfWork;
+        }
         public Task<ServiceResponse<ViewPostDTO>> CreatePostAsync(CreatePostDTO dto)
         {
             throw new NotImplementedException();

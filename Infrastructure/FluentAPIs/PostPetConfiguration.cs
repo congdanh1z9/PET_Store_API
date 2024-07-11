@@ -20,9 +20,6 @@ namespace Infrastructures.FluentAPIs
                 .WithMany(x => x.PostPets)
                 .HasForeignKey(x => x.ShopID);
 
-            builder.HasMany(x => x.Meets)
-                .WithOne(x => x.PostPet);
-
             builder.HasMany(x => x.Images)
                 .WithOne(x => x.PostPet);
 
