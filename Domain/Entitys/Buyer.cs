@@ -15,6 +15,6 @@ namespace Domain.Entitys
         public DateTime? DateOfBirth { get; set; }
         public string? ProfileImage { get; set; }
         public virtual Account? Account { get; set; }
-        public virtual Notifition? Notifition { get; set; }
+        public virtual Notification? Notification { get; set; }
     }
 }

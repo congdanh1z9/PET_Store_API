@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace Infrastructures.FluentAPIs
 {
-    public class NotificationConfiguration : IEntityTypeConfiguration<Notifition>
+    public class NotificationConfiguration : IEntityTypeConfiguration<Notification>
     {
-        public void Configure(EntityTypeBuilder<Notifition> builder)
+        public void Configure(EntityTypeBuilder<Notification> builder)
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
 
             builder.HasOne(x => x.Buyer)
-                .WithOne(x => x.Notifition)
-                .HasForeignKey<Notifition>(x => x.BuyerId);
+                .WithOne(x => x.Notification)
+                .HasForeignKey<Notification>(x => x.BuyerId);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Infrastructures.FluentAPIs
             builder.HasOne(x => x.Account)
                 .WithOne(x => x.Buyer)
                 .HasForeignKey<Buyer>(x => x.AccountId);
-            builder.HasOne(x => x.Notifition)
+            builder.HasOne(x => x.Notification)
                 .WithOne(x => x.Buyer);
         }
     }
