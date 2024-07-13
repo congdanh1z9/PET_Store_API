@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructures.Repositories
 {
-    public class NotificationRepository : GenericRepository<Notifition>, INotificationRepository
+    public class NotificationRepository : GenericRepository<Notification>, INotificationRepository
     {
         public NotificationRepository(AppDbContext context, ICurrentTime timeService, IClaimsService claimsService) : base(context, timeService, claimsService)
         {

@@ -1,7 +1,7 @@
 ﻿using Application.ViewModels.AccountDTO;
 using Application.ViewModels.BusinessPlanDTO;
 using Application.ViewModels.ImageDTO;
-using Application.ViewModels.MeetDTO;
+using Application.ViewModels.NotificationDTO;
 using Application.ViewModels.PostDTO;
 using Application.ViewModels.TypeDTO;
 using AutoMapper;
@@ -28,10 +28,10 @@ namespace Infrastructures.Mappers
             CreateMap<RegisterDTO, Account>();
             CreateMap<ChangePasswordDTO, Account>();
 
-            CreateMap<Notifition, CreateMeetDTO>().ReverseMap();
-            CreateMap<Notifition, UpdateMeetDTO>().ReverseMap();
-            CreateMap<Notifition, ViewMeetDTO>().ReverseMap();
-            CreateMap<List<Notifition>, List<ViewMeetDTO>>().ReverseMap();
+            CreateMap<Notification, CreateNotificationDTO>().ReverseMap();
+            CreateMap<Notification, UpdateNotificationDTO>().ReverseMap();
+            CreateMap<Notification, ViewNotificationDTO>().ReverseMap();
+            CreateMap<List<Notification>, List<ViewNotificationDTO>>().ReverseMap();
 
             CreateMap<PostPet, CreatePostDTO>().ReverseMap();
             CreateMap<PostPet, UpdatePostDTO>().ReverseMap();

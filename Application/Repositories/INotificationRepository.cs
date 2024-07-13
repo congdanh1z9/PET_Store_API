@@ -2,7 +2,7 @@
 
 namespace Application.Repositories
 {
-    public interface INotificationRepository : IGenericRepository<Notifition>
+    public interface INotificationRepository : IGenericRepository<Notification>
     {
     }
 }

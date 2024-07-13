@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.ViewModels.MeetDTO
+namespace Application.ViewModels.NotificationDTO
 {
-    public class CreateMeetDTO
+    public class UpdateNotificationDTO
     {
+        public int Id { get; set; }
         public string? Address { get; set; }
         public DateTime? CreateDate { get; set; }
-        public int? BuyerID { get; set; }
-        public int? PostPetID { get; set; }
+        public string? Status { get; set; }
     }
 }
