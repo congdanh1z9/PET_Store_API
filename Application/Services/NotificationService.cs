@@ -1,13 +1,9 @@
 ﻿using Application.Interfaces;
-using Application.Repositories;
 using Application.ServiceReponses;
-using Application.ViewModels.MeetDTO;
+using Application.ViewModels.NotificationDTO;
 using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Domain.Entitys;
+using MailKit.Search;
 
 namespace Application.Services
 {
@@ -22,96 +18,240 @@ namespace Application.Services
             _mapper = mapper;
         }
 
-        public async Task<ServiceResponse<ViewMeetDTO>> CancelMeetAsync(int id)
+        public async Task<ServiceResponse<ViewNotificationDTO>> CreateNotificationAsync(CreateNotificationDTO dto)
         {
-            //var reponse = new ServiceResponse<ViewMeetDTO>();
-            //try
-            //{
-            //    var ViewMeetDTO = await _unitOfWork.NotificationRepository.GetByIdAsync(id);
+            var reponse = new ServiceResponse<ViewNotificationDTO>();
 
-            //    if (ViewMeetDTO == null)
-            //    {
-            //        reponse.Success = false;
-            //        reponse.Status = "400";
-            //        reponse.Message = "Not found Meet";
-            //    }
-            //    else if (ViewMeetDTO.IsDeleted == true)
-            //    {
-            //        reponse.Success = false;
-            //        reponse.Status = "400";
-            //        reponse.Message = "Meet are deleted";
-            //    }
-            //    else if (ViewMeetDTO.Status == "Completed")
-            //    {
-            //        reponse.Success = false;
-            //        reponse.Status = "400";
-            //        reponse.Message = "Meet is Completed";
-            //    }
-            //    else
-            //    {
-            //        if (ViewMeetDTO.Status == "Processing")
-            //        {
-            //            ViewMeetDTO.Status = "Cancel";
-            //            var meetFofUpdate = _mapper.Map<ViewMeetDTO>(ViewMeetDTO);
-            //            var meetDTOAfterUpdate = _mapper.Map<ViewMeetDTO>(meetFofUpdate);
-            //            if (await _unitOfWork.SaveChangeAsync() > 0)
-            //            {
-            //                reponse.Data = meetDTOAfterUpdate;
-            //                reponse.Success = true;
-            //                reponse.Status = "200";
-            //                reponse.Message = "Update Meet successfully";
-            //            }
-            //            else
-            //            {
-            //                reponse.Data = meetDTOAfterUpdate;
-            //                reponse.Success = false;
-            //                reponse.Status = "400";
-            //                reponse.Message = "Update Meet fail!";
-            //            }
-            //        }
-            //    }
-            //}
-            //catch (Exception e)
-            //{
-            //    reponse.Success = false;
-            //    reponse.Status = "400";
-            //    reponse.Message = "Update meet fail!, exception";
-            //    reponse.ErrorMessages = new List<string> { e.Message };
-            //}
-
-            throw new NotImplementedException();
+            try
+            {
+                var entity = _mapper.Map<Notification>(dto);
+                await _unitOfWork.NotificationRepository.AddAsync(entity);
+                if (await _unitOfWork.SaveChangeAsync() > 0)
+                {
+                    reponse.Data = _mapper.Map<ViewNotificationDTO>(entity);
+                    reponse.Success = true;
+                    reponse.Status = "200";
+                    reponse.Message = "Add notification successfully";
+                    return reponse;
+                }
+                else
+                {
+                    reponse.Data = _mapper.Map<ViewNotificationDTO>(entity);
+                    reponse.Success = true;
+                    reponse.Status = "200";
+                    reponse.Message = "Add notification fail in Save";
+                    return reponse;
+                }
+            }
+            catch (Exception ex)
+            {
+                reponse.Success = false;
+                reponse.ErrorMessages = new List<string> { ex.Message };
+                return reponse;
+            }
         }
 
-        public Task<ServiceResponse<ViewMeetDTO>> CreateMeetAsync(CreateMeetDTO dto)
+        public async Task<ServiceResponse<ViewNotificationDTO>> DeleteNotificationAsync(int id)
         {
-            throw new NotImplementedException();
+            var reponse = new ServiceResponse<ViewNotificationDTO>();
+            try
+            {
+                var ViewNotificationDTO = await _unitOfWork.NotificationRepository.GetByIdAsync(id);
+
+                if (ViewNotificationDTO == null)
+                {
+                    reponse.Success = false;
+                    reponse.Status = "400";
+                    reponse.Message = "Not found notification";
+                }
+                else if (ViewNotificationDTO.IsDeleted == true)
+                {
+                    reponse.Success = false;
+                    reponse.Status = "400";
+                    reponse.Message = "notification are deleted";
+                }
+                else
+                {
+                        var notificationFofUpdate = _mapper.Map<ViewNotificationDTO>(ViewNotificationDTO);
+                        _unitOfWork.NotificationRepository.SoftRemove(ViewNotificationDTO);
+                        if (await _unitOfWork.SaveChangeAsync() > 0)
+                        {
+                            reponse.Data = notificationFofUpdate;
+                            reponse.Success = true;
+                            reponse.Status = "200";
+                            reponse.Message = "delete notification successfully";
+                        }
+                        else
+                        {
+                            reponse.Data = notificationFofUpdate;
+                            reponse.Success = false;
+                            reponse.Status = "400";
+                            reponse.Message = "delete notification fail!";
+                        }
+                }
+            }
+            catch (Exception e)
+            {
+                reponse.Success = false;
+                reponse.Status = "400";
+                reponse.Message = "Delete notification fail!, exception";
+                reponse.ErrorMessages = new List<string> { e.Message };
+            }
+            return reponse;
         }
 
-        public Task<ServiceResponse<IEnumerable<ViewMeetDTO>>> GetMeetByBuyerIDAsync(int buyerId)
+        public async Task<ServiceResponse<IEnumerable<ViewNotificationDTO>>> GetNotificationByBuyerIDAsync(int buyerId)
         {
-            throw new NotImplementedException();
+            var reponse = new ServiceResponse<IEnumerable<ViewNotificationDTO>>();
+            try
+            {
+                var cc = await _unitOfWork.NotificationRepository.GetAllAsync();
+                var c = cc.Where(x => x.BuyerId == buyerId).ToList();
+                if (c == null || c.Count <= 0)
+                {
+                    reponse.Data = _mapper.Map<List<ViewNotificationDTO>>(c);
+                    reponse.Success = true;
+                    reponse.Status = "400";
+                    reponse.Message = "Not Found Notification";
+                }
+                else
+                {
+                    reponse.Data = _mapper.Map<IEnumerable<ViewNotificationDTO>>(c);
+                    reponse.Success = true;
+                    reponse.Status = "200";
+                    reponse.Message = "Notification Retrieved Successfully";
+                }
+            }
+            catch (Exception ex)
+            {
+                reponse.Success = false;
+                reponse.ErrorMessages = new List<string> { ex.Message };
+            }
+
+            return reponse;
         }
 
-        public Task<ServiceResponse<ViewMeetDTO>> GetMeetByIdAsync(int orderId)
+        public async Task<ServiceResponse<ViewNotificationDTO>> GetNotificationByIdAsync(int Id)
         {
-            throw new NotImplementedException();
+            var reponse = new ServiceResponse<ViewNotificationDTO>();
+            try
+            {
+                var cc = await _unitOfWork.NotificationRepository.GetAllAsync();
+                var c = cc.Where(x => x.Id == Id).First();
+                if (c == null || c.IsDeleted != false)
+                {
+                    reponse.Data = _mapper.Map<ViewNotificationDTO>(c);
+                    reponse.Success = false;
+                    reponse.Status = "400";
+                    reponse.Message = "Notification Retrieved Fail";
+                }
+                else
+                {
+                    reponse.Data = _mapper.Map<ViewNotificationDTO>(c);
+                    reponse.Success = true;
+                    reponse.Status = "200";
+                    reponse.Message = "Notification Retrieved Successfully";
+                }
+            }
+            catch (Exception ex)
+            {
+                reponse.Success = false;
+                reponse.Status = "400";
+                reponse.Message = "Exception";
+                reponse.ErrorMessages = new List<string> { ex.Message };
+            }
+
+            return reponse;
         }
 
-        public Task<ServiceResponse<IEnumerable<ViewMeetDTO>>> GetMeetByShopIDAsync(int shopId)
+        public async Task<ServiceResponse<IEnumerable<ViewNotificationDTO>>> GetNotificationsAsync()
         {
-            throw new NotImplementedException();
+            var reponse = new ServiceResponse<IEnumerable<ViewNotificationDTO>>();
+            List<ViewNotificationDTO> DTOs = new List<ViewNotificationDTO>();
+            try
+            {
+                var notifications = await _unitOfWork.NotificationRepository.GetAllAsync();
+                foreach (var notification in notifications)
+                {
+                    if(notification.IsDeleted == false)
+                    {
+                        DTOs.Add(_mapper.Map<ViewNotificationDTO>(notification));
+                    }
+                }
+                if (DTOs.Count > 0)
+                {
+                    reponse.Data = DTOs;
+                    reponse.Success = true;
+                    reponse.Message = $"Have {DTOs.Count} notification.";
+                    reponse.Status = "200";
+                    return reponse;
+                }
+                else
+                {
+                    reponse.Success = false;
+                    reponse.Message = $"Have {DTOs.Count} notification.";
+                    reponse.Status = "400";
+                    return reponse;
+                }
+            }
+            catch (Exception ex)
+            {
+                reponse.Success = false;
+                reponse.Status = "400";
+                reponse.Message = "Exception";
+                reponse.ErrorMessages = new List<string> { ex.Message };
+                return reponse;
+            }
         }
 
-        public Task<ServiceResponse<IEnumerable<ViewMeetDTO>>> GetMeetsAsync()
+        public async Task<ServiceResponse<ViewNotificationDTO>> UpdateNotificationAsync(int Id, UpdateNotificationDTO dto)
         {
-            throw new NotImplementedException();
-        }
+            var reponse = new ServiceResponse<ViewNotificationDTO>();
+            try
+            {
+                var notificationChecked = await _unitOfWork.NotificationRepository.GetByIdAsync(Id);
 
-        public Task<ServiceResponse<ViewMeetDTO>> UpdateMeetAsync(int id, UpdateMeetDTO dto)
-        {
-            throw new NotImplementedException();
-        }
+                if (notificationChecked == null)
+                {
+                    reponse.Success = false;
+                    reponse.Message = "Not found order";
+                    reponse.Status = "400";
+                }
+                else if (notificationChecked.IsDeleted == true)
+                {
 
-        
+                    reponse.Success = false;
+                    reponse.Message = "Notification is deleted";
+                    reponse.Status = "400";
+                }
+                else
+                {
+
+                    var notificationFofUpdate = _mapper.Map(dto, notificationChecked);
+                    var notificationDTOAfterUpdate = _mapper.Map<ViewNotificationDTO>(notificationFofUpdate);
+                    if (await _unitOfWork.SaveChangeAsync() > 0)
+                    {
+                        reponse.Data = notificationDTOAfterUpdate;
+                        reponse.Success = true;
+                        reponse.Status = "200";
+                        reponse.Message = "Update Notification successfully";
+                    }
+                    else
+                    {
+                        reponse.Success = false;
+                        reponse.Status = "400";
+                        reponse.Message = "Update Notification fail!";
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                reponse.Success = false;
+                reponse.Message = "Update Notification fail!, exception";
+                reponse.ErrorMessages = new List<string> { e.Message };
+            }
+
+            return reponse;
+        }
     }
 }

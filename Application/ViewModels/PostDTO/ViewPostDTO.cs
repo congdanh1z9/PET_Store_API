@@ -23,7 +23,7 @@ namespace Application.ViewModels.PostDTO
         public int? HealthStatus { get; set; }
         public DateTime? CreateDate { get; set; }
         public string? Isvalid { get; set; }
-        public virtual IEnumerable<ViewMeetDTO>? MeetDTOs { get; set; }
+        public virtual IEnumerable<ViewNotificationDTO>? MeetDTOs { get; set; }
         public virtual IEnumerable<ImageViewDTO>? ImageDTOs { get; set; }
         
     }

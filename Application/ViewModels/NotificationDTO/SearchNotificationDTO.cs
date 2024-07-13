@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.ViewModels.MeetDTO
+namespace Application.ViewModels.NotificationDTO
 {
-    public class SearchMeetDTO
+    public class SearchNotificationDTO
     {
         public int Id { get; set; }
     }
