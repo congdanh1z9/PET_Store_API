@@ -455,7 +455,6 @@ D:\PRM392\GIT\Pet_Store_API\WebAPI\obj\Debug\net8.0\WebAPI.GeneratedMSBuildEdito
 D:\PRM392\GIT\Pet_Store_API\WebAPI\obj\Debug\net8.0\WebAPI.AssemblyInfoInputs.cache
 D:\PRM392\GIT\Pet_Store_API\WebAPI\obj\Debug\net8.0\WebAPI.AssemblyInfo.cs
 D:\PRM392\GIT\Pet_Store_API\WebAPI\obj\Debug\net8.0\WebAPI.csproj.CoreCompileInputs.cache
-D:\PRM392\GIT\Pet_Store_API\WebAPI\obj\Debug\net8.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\PRM392\GIT\Pet_Store_API\WebAPI\obj\Debug\net8.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache
 D:\PRM392\GIT\Pet_Store_API\WebAPI\obj\Debug\net8.0\WebAPI.sourcelink.json
 D:\PRM392\GIT\Pet_Store_API\WebAPI\obj\Debug\net8.0\staticwebassets.build.json
