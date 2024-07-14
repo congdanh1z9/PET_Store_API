@@ -25,6 +25,8 @@ D:\PRM-API\PET_Store_API\Domain\obj\Debug\net8.0\Domain.dll
 D:\PRM-API\PET_Store_API\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\PRM-API\PET_Store_API\Domain\obj\Debug\net8.0\Domain.pdb
 D:\PRM-API\PET_Store_API\Domain\obj\Debug\net8.0\ref\Domain.dll
+<<<<<<< HEAD
+=======
 D:\PRM392\GIT\Pet_Store_API\Domain\bin\Debug\net8.0\Domain.deps.json
 D:\PRM392\GIT\Pet_Store_API\Domain\bin\Debug\net8.0\Domain.dll
 D:\PRM392\GIT\Pet_Store_API\Domain\bin\Debug\net8.0\Domain.pdb
@@ -39,3 +41,4 @@ D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\Domain.pdb
 D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\ref\Domain.dll
 >>>>>>> 13c1c4898ca087b343e4b717394ac85d194f0387
+>>>>>>> 9bd13f366bbef00905f2d3d6c2264d1db6f30450

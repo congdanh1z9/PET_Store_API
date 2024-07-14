@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces;
 using Application.ServiceReponses;
 using Application.ViewModels.NotificationDTO;
+using Application.ViewModels.PostDTO;
 using AutoMapper;
 using Domain.Entitys;
 using MailKit.Search;
@@ -38,7 +39,7 @@ namespace Application.Services
                 {
                     reponse.Data = _mapper.Map<ViewNotificationDTO>(entity);
                     reponse.Success = true;
-                    reponse.Status = "200";
+                    reponse.Status = "400";
                     reponse.Message = "Add notification fail in Save";
                     return reponse;
                 }
@@ -46,6 +47,8 @@ namespace Application.Services
             catch (Exception ex)
             {
                 reponse.Success = false;
+                reponse.Status = "400";
+                reponse.Message = "Add fail with exception";
                 reponse.ErrorMessages = new List<string> { ex.Message };
                 return reponse;
             }
@@ -105,18 +108,26 @@ namespace Application.Services
             var reponse = new ServiceResponse<IEnumerable<ViewNotificationDTO>>();
             try
             {
+                List<ViewNotificationDTO> DTOs = new List<ViewNotificationDTO>();
                 var cc = await _unitOfWork.NotificationRepository.GetAllAsync();
                 var c = cc.Where(x => x.BuyerId == buyerId).ToList();
-                if (c == null || c.Count <= 0)
+                foreach (var item in c)
                 {
-                    reponse.Data = _mapper.Map<List<ViewNotificationDTO>>(c);
+                    if (item.IsDeleted == false)
+                    {
+                        DTOs.Add(_mapper.Map<ViewNotificationDTO>(item));
+                    }
+                }
+                if (DTOs == null || DTOs.Count <= 0)
+                {
+                    reponse.Data = DTOs;
                     reponse.Success = true;
                     reponse.Status = "400";
                     reponse.Message = "Not Found Notification";
                 }
                 else
                 {
-                    reponse.Data = _mapper.Map<IEnumerable<ViewNotificationDTO>>(c);
+                    reponse.Data = DTOs;
                     reponse.Success = true;
                     reponse.Status = "200";
                     reponse.Message = "Notification Retrieved Successfully";
@@ -214,7 +225,7 @@ namespace Application.Services
                 if (notificationChecked == null)
                 {
                     reponse.Success = false;
-                    reponse.Message = "Not found order";
+                    reponse.Message = "Not found notification";
                     reponse.Status = "400";
                 }
                 else if (notificationChecked.IsDeleted == true)
@@ -247,6 +258,7 @@ namespace Application.Services
             catch (Exception e)
             {
                 reponse.Success = false;
+                reponse.Status = "400";
                 reponse.Message = "Update Notification fail!, exception";
                 reponse.ErrorMessages = new List<string> { e.Message };
             }
