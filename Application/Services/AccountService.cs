@@ -113,6 +113,30 @@ namespace Application.Services
             response.Data = "Password changed successfully.";
             return response;
         }
+        public async Task<ServiceResponse<string>> UpdateAccount(string email, UpdateAccountDTO updateAccountDTO)
+        {
+            var response = new ServiceResponse<string>();
+
+            var account = await _unitOfWork.AccountRepository.GetFirstOrDefaultAsync(a => a.email == email);
+
+            if (account == null)
+            {
+                response.Success = false;
+                response.Status = "400";
+                response.Message = "Account not found.";
+                return response;
+            }
+
+            account.fullName = updateAccountDTO.fullName;
+            account.phoneNumber = updateAccountDTO.phoneNumber;
+
+            _unitOfWork.AccountRepository.Update(account);
+            await _unitOfWork.SaveChangeAsync();
+
+            response.Data = "Account updated successfully.";
+            return response;
+        }
+
 
 
         public async Task<ServiceResponse<List<AccountViewDTO>>> ViewAllAccounts()

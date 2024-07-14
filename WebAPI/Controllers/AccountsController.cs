@@ -60,5 +60,13 @@ namespace WebAPI.Controllers
 
             return Ok(result);
         }
+
+        [HttpPut("update")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> UpdateAccount(string email, [FromBody] UpdateAccountDTO updateAccountDTO)
+        {
+            var result = await _accountService.UpdateAccount(email, updateAccountDTO);
+            return Ok(result);
+        }
     }
 }
