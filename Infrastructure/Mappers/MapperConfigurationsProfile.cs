@@ -31,12 +31,10 @@ namespace Infrastructures.Mappers
             CreateMap<Notification, CreateNotificationDTO>().ReverseMap();
             CreateMap<Notification, UpdateNotificationDTO>().ReverseMap();
             CreateMap<Notification, ViewNotificationDTO>().ReverseMap();
-            CreateMap<List<Notification>, List<ViewNotificationDTO>>().ReverseMap();
 
             CreateMap<PostPet, CreatePostDTO>().ReverseMap();
             CreateMap<PostPet, UpdatePostDTO>().ReverseMap();
             CreateMap<PostPet, ViewPostDTO>().ReverseMap();
-            CreateMap<List<PostPet>, List<ViewPostDTO>>().ReverseMap();
         }
 
     }
