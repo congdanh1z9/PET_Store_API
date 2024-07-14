@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
 {
-    public class NotificationsController : ControllerBase
+    public class NotificationsController : BaseController
     {
         private readonly INotificationService _notificationService;
         public NotificationsController(INotificationService notificationService)
@@ -23,7 +23,7 @@ namespace WebAPI.Controllers
         //[Authorize(Roles = "Buyer")]
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> ViewAllNotificationByBuyerID(SearchNotificationDTO searchMeetDTO)
+        public async Task<IActionResult> ViewAllNotificationByBuyerID([FromQuery] SearchNotificationDTO searchMeetDTO)
         {
             var result = await _notificationService.GetNotificationByBuyerIDAsync(searchMeetDTO.Id);
             return Ok(result);
@@ -41,7 +41,7 @@ namespace WebAPI.Controllers
         //[Authorize(Roles = "Manager")]
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> ViewNotificationByID(SearchNotificationDTO searchMeetDTO)
+        public async Task<IActionResult> ViewNotificationByID([FromQuery] SearchNotificationDTO searchMeetDTO)
         {
             var result = await _notificationService.GetNotificationByIdAsync(searchMeetDTO.Id);
             return Ok(result);
@@ -66,7 +66,7 @@ namespace WebAPI.Controllers
         }
         [HttpDelete]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> DeleteNotification(SearchNotificationDTO searchMeetDTO)
+        public async Task<IActionResult> DeleteNotification([FromQuery] SearchNotificationDTO searchMeetDTO)
         {
             var c = await _notificationService.DeleteNotificationAsync(searchMeetDTO.Id);
             return Ok(c);

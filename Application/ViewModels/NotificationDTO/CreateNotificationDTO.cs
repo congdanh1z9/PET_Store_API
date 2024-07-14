@@ -8,9 +8,11 @@ namespace Application.ViewModels.NotificationDTO
 {
     public class CreateNotificationDTO
     {
+        public string? ShopName { get; set; }
+        public string? Title { get; set; }
         public string? Address { get; set; }
-        public DateTime? CreateDate { get; set; }
-        public int? BuyerID { get; set; }
-        public int? PostPetID { get; set; }
+        public float? Money { get; set; }
+        public DateTime? MeetDate { get; set; }
+        public int? BuyerId { get; set; }
     }
 }
