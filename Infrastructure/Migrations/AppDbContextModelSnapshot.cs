@@ -251,7 +251,7 @@ namespace Infrastructures.Migrations
                     b.ToTable("Kinds");
                 });
 
-            modelBuilder.Entity("Domain.Entitys.Meet", b =>
+            modelBuilder.Entity("Domain.Entitys.Notification", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -262,11 +262,8 @@ namespace Infrastructures.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("text");
 
-                    b.Property<int?>("BuyerID")
+                    b.Property<int?>("BuyerId")
                         .HasColumnType("integer");
-
-                    b.Property<DateTime?>("CreateDate")
-                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int?>("CreatedBy")
                         .HasColumnType("integer");
@@ -283,25 +280,36 @@ namespace Infrastructures.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
+                    b.Property<DateTime?>("MeetDate")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<int?>("ModificationBy")
                         .HasColumnType("integer");
 
                     b.Property<DateTime?>("ModificationDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int?>("PostPetID")
-                        .HasColumnType("integer");
+                    b.Property<float?>("Money")
+                        .HasColumnType("real");
 
-                    b.Property<string>("Status")
+                    b.Property<string>("SellerName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("SellerPhone")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ShopName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BuyerID");
+                    b.HasIndex("BuyerId")
+                        .IsUnique();
 
-                    b.HasIndex("PostPetID");
-
-                    b.ToTable("Meets");
+                    b.ToTable("Notifications");
                 });
 
             modelBuilder.Entity("Domain.Entitys.PostPet", b =>
@@ -498,19 +506,13 @@ namespace Infrastructures.Migrations
                     b.Navigation("PostPet");
                 });
 
-            modelBuilder.Entity("Domain.Entitys.Meet", b =>
+            modelBuilder.Entity("Domain.Entitys.Notification", b =>
                 {
                     b.HasOne("Domain.Entitys.Buyer", "Buyer")
-                        .WithMany("Meets")
-                        .HasForeignKey("BuyerID");
-
-                    b.HasOne("Domain.Entitys.PostPet", "PostPet")
-                        .WithMany("Meets")
-                        .HasForeignKey("PostPetID");
+                        .WithOne("Notification")
+                        .HasForeignKey("Domain.Entitys.Notification", "BuyerId");
 
                     b.Navigation("Buyer");
-
-                    b.Navigation("PostPet");
                 });
 
             modelBuilder.Entity("Domain.Entitys.PostPet", b =>
@@ -568,7 +570,7 @@ namespace Infrastructures.Migrations
 
             modelBuilder.Entity("Domain.Entitys.Buyer", b =>
                 {
-                    b.Navigation("Meets");
+                    b.Navigation("Notification");
                 });
 
             modelBuilder.Entity("Domain.Entitys.Kind", b =>
@@ -579,8 +581,6 @@ namespace Infrastructures.Migrations
             modelBuilder.Entity("Domain.Entitys.PostPet", b =>
                 {
                     b.Navigation("Images");
-
-                    b.Navigation("Meets");
                 });
 
             modelBuilder.Entity("Domain.Entitys.Shop", b =>

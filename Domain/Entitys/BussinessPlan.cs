@@ -13,6 +13,6 @@ namespace Domain.Entitys
         public decimal? Price { get; set; }
         public int? AmountDay { get; set; }
 
-        public virtual IEnumerable<Shop>? Shops { get; set; }  
+        public virtual IEnumerable<Shop>? Shops { get; set; }
     }
 }

@@ -20,7 +20,6 @@ namespace Domain.Entitys
         public string? Isvalid { get; set; }
 
         public virtual Shop? Shop { get; set; }
-        public virtual IEnumerable<Meet>? Meets { get; set; }
         public virtual IEnumerable<Image>? Images { get; set; } 
         public virtual Type? Type { get; set; } 
 
