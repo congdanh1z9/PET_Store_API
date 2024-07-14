@@ -8,7 +8,7 @@ namespace Application.ViewModels.ShopDTO
 {
     public class UpdateShopDTO
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public int? BusinessPlanId { get; set; }
         public DateTime? DateBusinessPlan { get; set; }
     }
