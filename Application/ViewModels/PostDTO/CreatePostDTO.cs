@@ -8,6 +8,7 @@ namespace Application.ViewModels.PostDTO
 {
     public class CreatePostDTO
     {
+        public int? ShopID { get; set; }
         public string? Name { get; set; }
         public int? TypeId { get; set; }
         public int? Age { get; set; }
