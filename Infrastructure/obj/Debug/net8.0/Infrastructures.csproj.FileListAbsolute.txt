@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+=======
+D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Infrastructures.deps.json
+D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Infrastructures.runtimeconfig.json
+D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Infrastructures.dll
+D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Infrastructures.pdb
+D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Application.dll
+D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Domain.dll
+D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Application.pdb
+D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Domain.pdb
+D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.csproj.AssemblyReference.cache
+D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.GeneratedMSBuildEditorConfig.editorconfig
+D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.AssemblyInfoInputs.cache
+D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.AssemblyInfo.cs
+D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.csproj.CoreCompileInputs.cache
+D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.sourcelink.json
+D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastr.66371D1E.Up2Date
+D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.dll
+D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\refint\Infrastructures.dll
+D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.pdb
+D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.genruntimeconfig.cache
+D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\ref\Infrastructures.dll
+>>>>>>> 975b8097fd83a5891cf058e85600f28382e996c9

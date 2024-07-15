@@ -20,9 +20,9 @@ namespace Application.Services
             _mapper = mapper;
         }
 
-        public async Task<ServiceResponse<AccountViewDTO>> Login(string email, string password)
+        public async Task<ServiceResponse<LoginResponseDTO>> Login(string email, string password)
         {
-            var response = new ServiceResponse<AccountViewDTO>();
+            var response = new ServiceResponse<LoginResponseDTO>();
             var account = await _unitOfWork.AccountRepository.GetFirstOrDefaultAsync(a => a.email == email && a.password == password);
 
             if (account == null)
@@ -33,9 +33,17 @@ namespace Application.Services
                 return response;
             }
 
-            response.Data = _mapper.Map<AccountViewDTO>(account);
+            response.Data = new LoginResponseDTO
+            {
+                AccountID = account.Id,
+                Role = account.role
+            };
+            response.Message = "Login successful.";
+            response.Status = "200";
+
             return response;
         }
+
 
         public async Task<ServiceResponse<string>> Register(RegisterDTO registerDTO)
         {

@@ -1,4 +1,5 @@
-﻿using Application.ServiceReponses;
+
+using Application.ServiceReponses;
 using Application.ViewModels.RequestDTO;
 
 namespace Application.Interfaces
@@ -8,3 +9,4 @@ namespace Application.Interfaces
         Task<ServiceResponse<ViewRequestDTO>> CreateRequestAsync(CreateRequestDTO dto);
     }
 }
+

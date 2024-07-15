@@ -1,4 +1,4 @@
-﻿using Application.Interfaces;
+using Application.Interfaces;
 using Application.ViewModels.NotificationDTO;
 using Microsoft.AspNetCore.Mvc;
 
@@ -73,3 +73,4 @@ namespace WebAPI.Controllers
         }
     }
 }
+
