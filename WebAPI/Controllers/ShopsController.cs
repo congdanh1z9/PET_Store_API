@@ -33,11 +33,11 @@ namespace WebAPI.Controllers
             return Ok(response);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<ServiceResponse<string>>> UpdateShop(int id, [FromBody] UpdateShopDTO updateShopDTO)
+        public async Task<ActionResult<ServiceResponse<string>>> UpdateShop([FromBody] UpdateShopDTO updateShopDTO)
         {
-            var response = await _shopService.UpdateShop(id, updateShopDTO);
+            var response = await _shopService.UpdateShop(updateShopDTO.Id, updateShopDTO);
             return Ok(response);
         }
     }

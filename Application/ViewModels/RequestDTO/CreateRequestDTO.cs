@@ -8,6 +8,8 @@ namespace Application.ViewModels.RequestDTO
 {
     public class CreateRequestDTO
     {
-
+        public int? ShopId { get; set; }
+        public int? BuyerId { get; set; }
+        public int? PostId { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpGet("get-by-id")]
+		[HttpPost]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> GetImageById([FromBody] ImageIdRequest request)
 		{

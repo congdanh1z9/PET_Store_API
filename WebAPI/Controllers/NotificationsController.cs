@@ -23,7 +23,7 @@ namespace WebAPI.Controllers
         //[Authorize(Roles = "Buyer")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> ViewAllNotificationByBuyerID([FromQuery] SearchNotificationDTO searchMeetDTO)
+        public async Task<IActionResult> ViewAllNotificationByBuyerID([FromBody] SearchNotificationDTO searchMeetDTO)
         {
             var result = await _notificationService.GetNotificationByBuyerIDAsync(searchMeetDTO.Id);
             return Ok(result);
@@ -41,7 +41,7 @@ namespace WebAPI.Controllers
         //[Authorize(Roles = "Manager")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> ViewNotificationByID([FromQuery] SearchNotificationDTO searchMeetDTO)
+        public async Task<IActionResult> ViewNotificationByID([FromBody] SearchNotificationDTO searchMeetDTO)
         {
             var result = await _notificationService.GetNotificationByIdAsync(searchMeetDTO.Id);
             return Ok(result);
@@ -66,7 +66,7 @@ namespace WebAPI.Controllers
         }
         [HttpDelete]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> DeleteNotification([FromQuery] SearchNotificationDTO searchMeetDTO)
+        public async Task<IActionResult> DeleteNotification([FromBody] SearchNotificationDTO searchMeetDTO)
         {
             var c = await _notificationService.DeleteNotificationAsync(searchMeetDTO.Id);
             return Ok(c);

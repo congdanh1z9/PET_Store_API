@@ -8,5 +8,8 @@ namespace Application.ViewModels.RequestDTO
 {
     public class UpdateRequestDTO
     {
+        public int? ShopId { get; set; }
+        public int? BuyerId { get; set; }
+        public int? PostId { get; set; }
     }
 }
