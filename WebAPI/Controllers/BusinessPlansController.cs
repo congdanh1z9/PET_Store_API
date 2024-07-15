@@ -5,8 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
 {
-	[Route("api/business-plan")]
-	[ApiController]
 	public class BusinessPlansController : BaseController
 	{
 		private readonly IBusinessPlanService _businessPlanService;

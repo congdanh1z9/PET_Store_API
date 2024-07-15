@@ -18,5 +18,6 @@ namespace Application
         public IPostRepository PostRepository { get; }
         IShopRepository ShopRepository { get; }
         IRequestRepository RequestRepository { get; }
+        IBuyerRepository BuyerRepository { get; }
     }
 }

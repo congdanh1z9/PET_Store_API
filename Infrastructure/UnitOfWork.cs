@@ -39,6 +39,8 @@ namespace Infrastructures
         public IShopRepository ShopRepository => _shopRepository;
         public IRequestRepository RequestRepository => _requestRepository;
 
+        public IBuyerRepository BuyerRepository => throw new NotImplementedException();
+
         public async Task<int> SaveChangeAsync()
         {
             return await _dbContext.SaveChangesAsync();
