@@ -122,7 +122,7 @@ namespace Application.Services
             return reponse;
         }
 
-        public async Task<ServiceResponse<IEnumerable<ViewRequestDTO>>> GetRequestByBuyerIDAsync(int Id)
+        public async Task<ServiceResponse<IEnumerable<ViewRequestDTO>>> GetRequestByShopIDAsync(int Id)
         {
             var reponse = new ServiceResponse<IEnumerable<ViewRequestDTO>>();
             try
@@ -130,7 +130,7 @@ namespace Application.Services
                 List<ViewRequestDTO> DTOs = new List<ViewRequestDTO>();
                 var ccc = await _unitOfWork.RequestRepository.GetAllAsync();
                 var cc = ccc.OrderByDescending(x => x.Id);
-                var c = cc.Where(x => x.BuyerId == Id).ToList();
+                var c = cc.Where(x => x.ShopId == Id).ToList();
                 foreach (var item in c)
                 {
                     if (item.IsDeleted == false)

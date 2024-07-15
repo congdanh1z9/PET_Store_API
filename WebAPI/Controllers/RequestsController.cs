@@ -32,9 +32,9 @@ namespace WebAPI.Controllers
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> ViewAllRequestByBuyerID([FromBody] SearchPostDTO searchPostDTO)
+        public async Task<IActionResult> ViewAllRequestByShopID([FromBody] SearchPostDTO searchPostDTO)
         {
-            var result = await _requestService.GetRequestByBuyerIDAsync(searchPostDTO.Id);
+            var result = await _requestService.GetRequestByShopIDAsync(searchPostDTO.Id);
             return Ok(result);
         }
 
