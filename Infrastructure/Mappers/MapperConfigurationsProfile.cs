@@ -3,6 +3,7 @@ using Application.ViewModels.BusinessPlanDTO;
 using Application.ViewModels.ImageDTO;
 using Application.ViewModels.NotificationDTO;
 using Application.ViewModels.PostDTO;
+using Application.ViewModels.RequestDTO;
 using Application.ViewModels.ShopDTO;
 using Application.ViewModels.TypeDTO;
 using AutoMapper;
@@ -38,6 +39,10 @@ namespace Infrastructures.Mappers
             CreateMap<PostPet, CreatePostDTO>().ReverseMap();
             CreateMap<PostPet, UpdatePostDTO>().ReverseMap();
             CreateMap<PostPet, ViewPostDTO>().ReverseMap();
+
+            CreateMap<Request, CreateRequestDTO>().ReverseMap();
+            CreateMap<Request, UpdateRequestDTO>().ReverseMap();
+            CreateMap<Request, ViewRequestDTO>().ReverseMap();
 
             CreateMap<Shop, ShopViewDTO>().ReverseMap();
             CreateMap<Shop, CreateShopDTO>().ReverseMap();

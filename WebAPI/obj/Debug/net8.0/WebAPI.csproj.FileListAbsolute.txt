@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 D:\PRM-API\PET_Store_API\WebAPI\bin\Debug\net8.0\WebAPI.exe
 D:\PRM-API\PET_Store_API\WebAPI\bin\Debug\net8.0\appsettings.Development.json
 D:\PRM-API\PET_Store_API\WebAPI\bin\Debug\net8.0\appsettings.json
@@ -156,3 +158,4 @@ D:\PRM-API\PET_Store_API\WebAPI\obj\Debug\net8.0\refint\WebAPI.dll
 D:\PRM-API\PET_Store_API\WebAPI\obj\Debug\net8.0\WebAPI.pdb
 D:\PRM-API\PET_Store_API\WebAPI\obj\Debug\net8.0\WebAPI.genruntimeconfig.cache
 D:\PRM-API\PET_Store_API\WebAPI\obj\Debug\net8.0\ref\WebAPI.dll
+>>>>>>> 975b8097fd83a5891cf058e85600f28382e996c9

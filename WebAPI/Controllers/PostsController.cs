@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
         //[Authorize(Roles = "Buyer")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> ViewAllPostByShopID([FromQuery] SearchPostDTO searchPostDTO)
+        public async Task<IActionResult> ViewAllPostByShopID([FromBody] SearchPostDTO searchPostDTO)
         {
             var result = await _postService.GetPostByShopIDAsync(searchPostDTO.Id);
             return Ok(result);
@@ -33,7 +33,7 @@ namespace WebAPI.Controllers
         //[Authorize(Roles = "Manager")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> ViewPostByID([FromQuery] SearchPostDTO searchPostDTO)
+        public async Task<IActionResult> ViewPostByID([FromBody] SearchPostDTO searchPostDTO)
         {
             var result = await _postService.GetPostByIdAsync(searchPostDTO.Id);
             return Ok(result);
@@ -59,7 +59,7 @@ namespace WebAPI.Controllers
 
         [HttpDelete]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> CancelPost([FromQuery] SearchPostDTO searchPostDTO)
+        public async Task<IActionResult> CancelPost([FromBody] SearchPostDTO searchPostDTO)
         {
             var c = await _postService.DeletePostAsync(searchPostDTO.Id);
             return Ok(c);

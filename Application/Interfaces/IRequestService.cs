@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using Application.ServiceReponses;
+using Application.ViewModels.RequestDTO;
 
 namespace Application.Interfaces
 {
     public interface IRequestService
     {
+        Task<ServiceResponse<ViewRequestDTO>> CreateRequestAsync(CreateRequestDTO dto);
     }
 }
+
