@@ -12,11 +12,13 @@ namespace Application.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly IRequestService _requestService;
 
-        public NotificationService(IUnitOfWork unitOfWork, IMapper mapper)
+        public NotificationService(IUnitOfWork unitOfWork, IMapper mapper, IRequestService requestService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _requestService = requestService;
         }
 
         public async Task<ServiceResponse<ViewNotificationDTO>> CreateNotificationAsync(CreateNotificationDTO dto)
@@ -25,24 +27,43 @@ namespace Application.Services
 
             try
             {
-                var entity = _mapper.Map<Notification>(dto);
-                await _unitOfWork.NotificationRepository.AddAsync(entity);
-                if (await _unitOfWork.SaveChangeAsync() > 0)
+                if(validatetionCreate(dto) == true)
                 {
-                    reponse.Data = _mapper.Map<ViewNotificationDTO>(entity);
-                    reponse.Success = true;
-                    reponse.Status = "200";
-                    reponse.Message = "Add notification successfully";
-                    return reponse;
+                    var entity = _mapper.Map<Notification>(dto);
+                    var request = _unitOfWork.RequestRepository.GetByIdAsync((int)dto.requestID).Result;
+                    var shop = _unitOfWork.ShopRepository.GetByIdAsync((int)request.ShopId).Result;
+                    var post = _unitOfWork.PostRepository.GetByIdAsync((int)request.PostId).Result;
+                    entity.ShopName = shop.Name;
+                    entity.Title = post.Name;
+                    entity.Money = post.Price;
+                    entity.BuyerId = request.BuyerId;
+                    await _unitOfWork.NotificationRepository.AddAsync(entity);
+                    if (await _unitOfWork.SaveChangeAsync() > 0)
+                    {
+                        await _requestService.DeletePostAsync(request.Id);
+                        reponse.Data = _mapper.Map<ViewNotificationDTO>(entity);
+                        reponse.Success = true;
+                        reponse.Status = "200";
+                        reponse.Message = "Add notification successfully";
+                        return reponse;
+                    }
+                    else
+                    {
+                        reponse.Data = _mapper.Map<ViewNotificationDTO>(entity);
+                        reponse.Success = false;
+                        reponse.Status = "400";
+                        reponse.Message = "Add notification fail in Save";
+                        return reponse;
+                    }
                 }
                 else
                 {
-                    reponse.Data = _mapper.Map<ViewNotificationDTO>(entity);
-                    reponse.Success = true;
+                    reponse.Success = false;
                     reponse.Status = "400";
-                    reponse.Message = "Add notification fail in Save";
+                    reponse.Message = "Add notification fail with validation input";
                     return reponse;
                 }
+                
             }
             catch (Exception ex)
             {
@@ -54,6 +75,19 @@ namespace Application.Services
             }
         }
 
+        private bool validatetionCreate(CreateNotificationDTO dto)
+        {
+            bool flag = true;
+            if (dto.Address.Equals(""))
+            {
+                flag = false;
+            }
+            if(dto.MeetDate.Value < DateTime.Now)
+            {
+                flag = false;
+            }
+            return flag;
+        }
         public async Task<ServiceResponse<ViewNotificationDTO>> DeleteNotificationAsync(int id)
         {
             var reponse = new ServiceResponse<ViewNotificationDTO>();

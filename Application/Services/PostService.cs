@@ -63,7 +63,7 @@ namespace Application.Services
                 {
                     reponse.Success = false;
                     reponse.Status = "400";
-                    reponse.Message = "Not found notification";
+                    reponse.Message = "Not found Post";
                 }
                 else if (ViewPostDTO.IsDeleted == true)
                 {
@@ -162,14 +162,14 @@ namespace Application.Services
                     reponse.Data = DTOs;
                     reponse.Success = true;
                     reponse.Status = "400";
-                    reponse.Message = "Not Found Notification";
+                    reponse.Message = "Not Found Post";
                 }
                 else
                 {
                     reponse.Data = DTOs;
                     reponse.Success = true;
                     reponse.Status = "200";
-                    reponse.Message = "Notification Retrieved Successfully";
+                    reponse.Message = "Post Retrieved Successfully";
                 }
             }
             catch (Exception ex)

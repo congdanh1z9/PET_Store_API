@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ShopsController : ControllerBase
+    public class ShopsController : BaseController
     {
         private readonly IShopService _shopService;
 

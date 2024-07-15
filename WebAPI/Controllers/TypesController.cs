@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
 {
-	[Route("api/type")]
-	[ApiController]
 	public class TypesController : BaseController
 	{
 		private readonly ITypeService _typeService;

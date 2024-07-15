@@ -8,9 +8,7 @@ using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class AccountsController : ControllerBase
+    public class AccountsController : BaseController
     {
         private readonly IAccountService _accountService;
 
