@@ -22,7 +22,7 @@ namespace WebAPI.Controllers
 
 
         //[Authorize(Roles = "Buyer")]
-        [HttpGet]
+        [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> ViewAllPostByShopID([FromQuery] SearchPostDTO searchPostDTO)
         {
@@ -31,7 +31,7 @@ namespace WebAPI.Controllers
         }
 
         //[Authorize(Roles = "Manager")]
-        [HttpGet]
+        [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> ViewPostByID([FromQuery] SearchPostDTO searchPostDTO)
         {
