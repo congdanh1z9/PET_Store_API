@@ -17,6 +17,7 @@ namespace Infrastructures.Mappers
             //CreateMap(typeof(Pagination<>), typeof(Pagination<>));
             CreateMap<Account, AccountViewDTO>().ReverseMap();
             CreateMap<Account, UpdateAccountDTO>().ReverseMap();
+            CreateMap<Account , LoginResponseDTO>().ReverseMap();
             CreateMap<BussinessPlan, BusinessPlanViewDTO>().ReverseMap();
             CreateMap<BussinessPlan, BusinessPlanCreateDTO>().ReverseMap();
             CreateMap<BussinessPlan, BusinessPlanUpdateDTO>().ReverseMap();
