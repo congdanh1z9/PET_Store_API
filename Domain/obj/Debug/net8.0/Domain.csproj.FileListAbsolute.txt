@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 D:\PRM-API\PET_Store_API\Domain\bin\Debug\net8.0\Domain.deps.json
 D:\PRM-API\PET_Store_API\Domain\bin\Debug\net8.0\Domain.dll
 D:\PRM-API\PET_Store_API\Domain\bin\Debug\net8.0\Domain.pdb
@@ -12,18 +11,3 @@ D:\PRM-API\PET_Store_API\Domain\obj\Debug\net8.0\Domain.dll
 D:\PRM-API\PET_Store_API\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\PRM-API\PET_Store_API\Domain\obj\Debug\net8.0\Domain.pdb
 D:\PRM-API\PET_Store_API\Domain\obj\Debug\net8.0\ref\Domain.dll
-=======
-D:\PRM392\GIT\Pet_Store_API\Domain\bin\Debug\net8.0\Domain.deps.json
-D:\PRM392\GIT\Pet_Store_API\Domain\bin\Debug\net8.0\Domain.dll
-D:\PRM392\GIT\Pet_Store_API\Domain\bin\Debug\net8.0\Domain.pdb
-D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
-D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
-D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
-D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
-D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\Domain.sourcelink.json
-D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\Domain.dll
-D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\refint\Domain.dll
-D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\Domain.pdb
-D:\PRM392\GIT\Pet_Store_API\Domain\obj\Debug\net8.0\ref\Domain.dll
->>>>>>> 78cd8939b9d639a0baee165e9a5c1bdd33dae251
