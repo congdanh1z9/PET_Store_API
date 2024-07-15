@@ -13,6 +13,7 @@ namespace Application.Interfaces
         Task<ServiceResponse<string>> ChangePassword(string email, string oldPassword, string newPassword, string confirmPassword);
         Task<ServiceResponse<List<AccountViewDTO>>> ViewAllAccounts();
         Task<ServiceResponse<string>> UpdateAccount(string email, UpdateAccountDTO updateAccountDTO);
-        
+        Task<ServiceResponse<BuyerViewDTO>> GetBuyerByAccountID(SearchPostDTO searchPostDTO);
+
     }
 }

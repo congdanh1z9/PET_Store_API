@@ -2,6 +2,8 @@
 using Application.Interfaces;
 using Application.ServiceReponses;
 using Application.ViewModels.AccountDTO;
+using Application.ViewModels.PostDTO;
+using Application.ViewModels.ShopDTO;
 using AutoMapper;
 using Domain.Entitys;
 using System.Collections.Generic;
@@ -154,6 +156,38 @@ namespace Application.Services
             var dtos = _mapper.Map<List<AccountViewDTO>>(accounts);
             response.Data = dtos;
             return response;
+        }
+
+        public async Task<ServiceResponse<BuyerViewDTO>> GetBuyerByAccountID(SearchPostDTO searchPostDTO)
+        {
+            var reponse = new ServiceResponse<BuyerViewDTO>();
+            try
+            {
+                var c =  _unitOfWork.AccountRepository.GetByIdAsync(searchPostDTO.Id, x => x.Buyer).Result;
+                if (c.Buyer == null || c.Buyer.IsDeleted == true)
+                {
+                    reponse.Data = _mapper.Map<BuyerViewDTO>(c.Buyer);
+                    reponse.Success = false;
+                    reponse.Status = "400";
+                    reponse.Message = "Buyer Retrieved Fail";
+                }
+                else
+                {
+                    reponse.Data = _mapper.Map<BuyerViewDTO>(c.Buyer);
+                    reponse.Success = true;
+                    reponse.Status = "200";
+                    reponse.Message = "Buyer Retrieved Successfully";
+                }
+            }
+            catch (Exception ex)
+            {
+                reponse.Success = false;
+                reponse.Status = "400";
+                reponse.Message = "Exception";
+                reponse.ErrorMessages = new List<string> { ex.Message };
+            }
+
+            return reponse;
         }
     }
 }
