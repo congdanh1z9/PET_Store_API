@@ -10,7 +10,7 @@ namespace Application.Interfaces
         Task<ServiceResponse<ViewRequestDTO>> CreateRequestAsync(CreateRequestDTO dto);
         Task<ServiceResponse<IEnumerable<ViewRequestDTO>>> GetRequestsAsync();
         Task<ServiceResponse<ViewRequestDTO>> GetRequestByIdAsync(int Id);
-        Task<ServiceResponse<IEnumerable<ViewRequestDTO>>> GetRequestByBuyerIDAsync(int Id);
+        Task<ServiceResponse<IEnumerable<ViewRequestDTO>>> GetRequestByShopIDAsync(int Id);
         Task<ServiceResponse<ViewRequestDTO>> DeletePostAsync(int Id);
     }
 }
