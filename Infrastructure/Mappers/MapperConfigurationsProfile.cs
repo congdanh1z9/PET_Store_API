@@ -47,6 +47,9 @@ namespace Infrastructures.Mappers
             CreateMap<Shop, ShopViewDTO>().ReverseMap();
             CreateMap<Shop, CreateShopDTO>().ReverseMap();
             CreateMap<Shop, UpdateShopDTO>().ReverseMap();
+
+            CreateMap<Buyer, BuyerViewDTO>().ReverseMap();
+
         }
 
     }

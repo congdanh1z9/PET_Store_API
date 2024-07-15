@@ -1,6 +1,8 @@
 ﻿// AccountsController.cs
 using Application.Interfaces;
+using Application.Services;
 using Application.ViewModels.AccountDTO;
+using Application.ViewModels.PostDTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -65,6 +67,14 @@ namespace WebAPI.Controllers
         {
             var result = await _accountService.UpdateAccount(email, updateAccountDTO);
             return Ok(result);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetProfileBuyerByAccountID([FromBody] SearchPostDTO dto)
+        {
+            var response = await _accountService.GetBuyerByAccountID(dto);
+            return Ok(response);
         }
     }
 }
