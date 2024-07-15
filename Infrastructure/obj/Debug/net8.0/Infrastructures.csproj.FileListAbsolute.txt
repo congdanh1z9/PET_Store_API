@@ -1,27 +1,3 @@
-D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Infrastructures.deps.json
-D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Infrastructures.runtimeconfig.json
-D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Infrastructures.dll
-D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Infrastructures.pdb
-D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Application.dll
-D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Domain.dll
-D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Application.pdb
-D:\PRM-API\PET_Store_API\Infrastructure\bin\Debug\net8.0\Domain.pdb
-D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.csproj.AssemblyReference.cache
-D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.GeneratedMSBuildEditorConfig.editorconfig
-D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.AssemblyInfoInputs.cache
-D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.AssemblyInfo.cs
-D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.csproj.CoreCompileInputs.cache
-D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.sourcelink.json
-D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastr.66371D1E.Up2Date
-D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.dll
-D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\refint\Infrastructures.dll
-D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.pdb
-D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.genruntimeconfig.cache
-D:\PRM-API\PET_Store_API\Infrastructure\obj\Debug\net8.0\ref\Infrastructures.dll
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 D:\PRM392\GIT\Pet_Store_API\Infrastructure\bin\Debug\net8.0\Infrastructures.deps.json
 D:\PRM392\GIT\Pet_Store_API\Infrastructure\bin\Debug\net8.0\Infrastructures.runtimeconfig.json
 D:\PRM392\GIT\Pet_Store_API\Infrastructure\bin\Debug\net8.0\Infrastructures.dll
@@ -42,6 +18,3 @@ D:\PRM392\GIT\Pet_Store_API\Infrastructure\obj\Debug\net8.0\refint\Infrastructur
 D:\PRM392\GIT\Pet_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.pdb
 D:\PRM392\GIT\Pet_Store_API\Infrastructure\obj\Debug\net8.0\Infrastructures.genruntimeconfig.cache
 D:\PRM392\GIT\Pet_Store_API\Infrastructure\obj\Debug\net8.0\ref\Infrastructures.dll
->>>>>>> 13c1c4898ca087b343e4b717394ac85d194f0387
->>>>>>> 9bd13f366bbef00905f2d3d6c2264d1db6f30450
->>>>>>> dd65c9ac1ff963c7b5732c55bd84ba54fe543680

@@ -17,5 +17,6 @@ namespace Application
         public INotificationRepository NotificationRepository { get; }
         public IPostRepository PostRepository { get; }
         IShopRepository ShopRepository { get; }
+        IRequestRepository RequestRepository { get; }
     }
 }
