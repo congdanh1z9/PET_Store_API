@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-
 namespace Infrastructures.FluentAPIs
 {
     public class ShopConfiguration : IEntityTypeConfiguration<Shop>
@@ -11,6 +10,10 @@ namespace Infrastructures.FluentAPIs
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
+
+            builder.Property(x => x.Name).HasMaxLength(100);
+            builder.Property(x => x.Address).HasMaxLength(250);
+            builder.Property(x => x.Description).HasMaxLength(500);
 
             builder.HasOne(x => x.Account)
                 .WithOne(x => x.Shop)

@@ -4,6 +4,7 @@ using Application.Repositories;
 using Application.Services;
 using Infrastructures.Mappers;
 using Infrastructures.Repositories;
+using Infrastructures.Repositorys;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -34,6 +35,9 @@ namespace Infrastructures
 
             services.AddScoped<IPostRepository, PostRepository>();
             services.AddScoped<IPostService, PostService>();
+
+            services.AddScoped<IShopRepository, ShopRepository>(); // Added Shop repository
+            services.AddScoped<IShopService, ShopService>(); // Added Shop service
 
             services.AddDbContext<AppDbContext>(option => option.UseNpgsql(databaseConnection));
             services.AddAutoMapper(typeof(MapperConfigurationsProfile).Assembly);
