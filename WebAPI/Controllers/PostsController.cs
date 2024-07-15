@@ -64,5 +64,13 @@ namespace WebAPI.Controllers
             var c = await _postService.DeletePostAsync(searchPostDTO.Id);
             return Ok(c);
         }
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> SearchPostByName([FromBody] SearchNameDTO dto)
+        {
+            var result = await _postService.SearchPostsAsync(dto);
+            return Ok(result);
+        }
     }
 }

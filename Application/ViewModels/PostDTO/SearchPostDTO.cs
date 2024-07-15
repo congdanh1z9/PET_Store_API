@@ -10,4 +10,9 @@ namespace Application.ViewModels.PostDTO
     {
         public int Id { get; set; }
     }
+
+    public class SearchNameDTO
+    {
+        public string? input { get; set; }
+    }
 }

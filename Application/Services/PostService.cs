@@ -225,6 +225,51 @@ namespace Application.Services
             }
         }
 
+        public async Task<ServiceResponse<IEnumerable<ViewPostDTO>>> SearchPostsAsync(SearchNameDTO dto)
+        {
+            var reponse = new ServiceResponse<IEnumerable<ViewPostDTO>>();
+            List<ViewPostDTO> DTOs = new List<ViewPostDTO>();
+            try
+            {
+                var postsss = await _unitOfWork.PostRepository.GetAllAsync(x => x.Type);
+                var postss = postsss.Where(x => x.Name.ToLower().Contains(dto.input.ToString().ToLower()));
+                var posts = postss.OrderByDescending(x => x.Id);
+                foreach (var post in posts)
+                {
+                    if (post.IsDeleted == false)
+                    {
+                        var mapper = _mapper.Map<ViewPostDTO>(post);
+                        mapper.TypeName = post.Type.Name;
+                        mapper.HealthStatusName = printHealthStatus((int)mapper.HealthStatus);
+                        DTOs.Add(mapper);
+                    }
+                }
+                if (DTOs.Count > 0 || DTOs == null)
+                {
+                    reponse.Data = DTOs;
+                    reponse.Success = true;
+                    reponse.Message = $"Have {DTOs.Count} post.";
+                    reponse.Status = "200";
+                    return reponse;
+                }
+                else
+                {
+                    reponse.Success = false;
+                    reponse.Message = $"Have {DTOs.Count} post.";
+                    reponse.Status = "400";
+                    return reponse;
+                }
+            }
+            catch (Exception ex)
+            {
+                reponse.Success = false;
+                reponse.Status = "400";
+                reponse.Message = "Exception";
+                reponse.ErrorMessages = new List<string> { ex.Message };
+                return reponse;
+            }
+        }
+
         public async Task<ServiceResponse<ViewPostDTO>> UpdatePostAsync(int Id, UpdatePostDTO dto)
         {
             var reponse = new ServiceResponse<ViewPostDTO>();
