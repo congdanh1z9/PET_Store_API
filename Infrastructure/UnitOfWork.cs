@@ -13,8 +13,9 @@ namespace Infrastructures
         private readonly ITypeRepository _typeRepository;
         private readonly INotificationRepository _notificationRepository;
         private readonly IPostRepository _postRepository;
+        private readonly IShopRepository _shopRepository;
 
-        public UnitOfWork(AppDbContext dbContext, IAccountRepository accountRepository, IBusinessPlanRepository businessPlanRepository, IImageRepository imageRepository, ITypeRepository typeRepository, INotificationRepository notificationRepository, IPostRepository postRepository)
+        public UnitOfWork(AppDbContext dbContext, IAccountRepository accountRepository, IBusinessPlanRepository businessPlanRepository, IImageRepository imageRepository, ITypeRepository typeRepository, INotificationRepository notificationRepository, IPostRepository postRepository , IShopRepository shopRepository)
         {
             _dbContext = dbContext;
             _accountRepository = accountRepository;
@@ -23,6 +24,7 @@ namespace Infrastructures
             _typeRepository = typeRepository;
             _notificationRepository = notificationRepository;
             _postRepository = postRepository;
+            _shopRepository = shopRepository;
         }
 
         public IAccountRepository AccountRepository => _accountRepository;
@@ -31,6 +33,7 @@ namespace Infrastructures
         public ITypeRepository TypeRepository => _typeRepository;
         public INotificationRepository NotificationRepository => _notificationRepository;
         public IPostRepository PostRepository => _postRepository;
+        public IShopRepository ShopRepository => _shopRepository;
 
         public async Task<int> SaveChangeAsync()
         {
