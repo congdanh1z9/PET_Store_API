@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Application.ServiceReponses;
+using Application.ViewModels.PostDTO;
 using Application.ViewModels.ShopDTO;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -28,6 +29,14 @@ namespace WebAPI.Controllers
         public async Task<ActionResult<ServiceResponse<string>>> CreateShop([FromBody] CreateShopDTO createShopDTO)
         {
             var response = await _shopService.CreateShop(createShopDTO);
+            return Ok(response);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetProfileShopByAccountID([FromBody] SearchPostDTO dto)
+        {
+            var response = await _shopService.GetShopByAccountID(dto);
             return Ok(response);
         }
 

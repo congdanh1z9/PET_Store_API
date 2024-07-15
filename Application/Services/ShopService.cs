@@ -1,5 +1,7 @@
 ﻿using Application.Interfaces;
 using Application.ServiceReponses;
+using Application.ViewModels.NotificationDTO;
+using Application.ViewModels.PostDTO;
 using Application.ViewModels.ShopDTO;
 using AutoMapper;
 using Domain.Entitys;
@@ -68,6 +70,39 @@ namespace Application.Services
 
             response.Data = "Shop updated successfully.";
             return response;
+        }
+
+        public async Task<ServiceResponse<ShopViewDTO>> GetShopByAccountID(SearchPostDTO searchPostDTO)
+        {
+            var reponse = new ServiceResponse<ShopViewDTO>();
+            try
+            {
+                var cc = await _unitOfWork.ShopRepository.GetAllAsync();
+                var c = cc.Where(x => x.AccountId == searchPostDTO.Id).First();
+                if (c == null || c.IsDeleted == true)
+                {
+                    reponse.Data = _mapper.Map<ShopViewDTO>(c);
+                    reponse.Success = false;
+                    reponse.Status = "400";
+                    reponse.Message = "Shop Retrieved Fail";
+                }
+                else
+                {
+                    reponse.Data = _mapper.Map<ShopViewDTO>(c);
+                    reponse.Success = true;
+                    reponse.Status = "200";
+                    reponse.Message = "Shop Retrieved Successfully";
+                }
+            }
+            catch (Exception ex)
+            {
+                reponse.Success = false;
+                reponse.Status = "400";
+                reponse.Message = "Exception";
+                reponse.ErrorMessages = new List<string> { ex.Message };
+            }
+
+            return reponse;
         }
     }
 }
