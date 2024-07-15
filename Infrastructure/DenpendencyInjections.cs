@@ -36,6 +36,9 @@ namespace Infrastructures
             services.AddScoped<IPostRepository, PostRepository>();
             services.AddScoped<IPostService, PostService>();
 
+            services.AddScoped<IRequestService, RequestService>();
+            services.AddScoped<IRequestRepository, RequestRepository>();
+
             services.AddScoped<IShopRepository, ShopRepository>(); // Added Shop repository
             services.AddScoped<IShopService, ShopService>(); // Added Shop service
 
