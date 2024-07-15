@@ -8,4 +8,3 @@ namespace Application.Repositories
         Task<Account> GetFirstOrDefaultAsync(Expression<Func<Account, bool>> predicate);
     }
 }
-
