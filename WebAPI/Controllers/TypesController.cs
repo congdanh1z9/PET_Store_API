@@ -25,7 +25,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpGet("get-by-id")]
+		[HttpPost("get-by-id")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> GetTypeById([FromBody] TypeIdRequest request)
 		{
@@ -33,7 +33,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpGet("get-by-kind-id")]
+		[HttpPost("get-by-kind-id")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> GetTypesByKindId([FromBody] KindIdRequest request)
 		{

@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpGet("get-by-id")]
+		[HttpPost("get-by-id")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> GetImageById([FromBody] ImageIdRequest request)
 		{
@@ -32,7 +32,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpGet("get-by-post-pet-id")]
+		[HttpPost("get-by-post-pet-id")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> GetImagesByPostPetId([FromBody] PostPetIdRequest request)
 		{

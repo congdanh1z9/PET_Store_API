@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
 			return Ok(result);
 		}
 
-		[HttpGet("get-by-id")]
+		[HttpPost("get-by-id")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		public async Task<IActionResult> GetBusinessPlanById([FromQuery] BusinessPlanIdRequest request)
 		{
