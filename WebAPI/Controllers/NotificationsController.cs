@@ -21,7 +21,7 @@ namespace WebAPI.Controllers
         }
 
         //[Authorize(Roles = "Buyer")]
-        [HttpGet]
+        [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> ViewAllNotificationByBuyerID([FromQuery] SearchNotificationDTO searchMeetDTO)
         {
@@ -39,7 +39,7 @@ namespace WebAPI.Controllers
         //}
 
         //[Authorize(Roles = "Manager")]
-        [HttpGet]
+        [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> ViewNotificationByID([FromQuery] SearchNotificationDTO searchMeetDTO)
         {

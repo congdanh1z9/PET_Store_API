@@ -1,12 +1,10 @@
 ﻿using Application.Interfaces;
 using Application.ServiceReponses;
-using Application.ViewModels.NotificationDTO;
 using Application.ViewModels.PostDTO;
 using AutoMapper;
 using Domain.Entitys;
 using Domain.Enums;
-using Microsoft.Extensions.Diagnostics.HealthChecks;
-using Microsoft.Extensions.Hosting;
+
 
 namespace Application.Services
 {
@@ -108,7 +106,8 @@ namespace Application.Services
             var reponse = new ServiceResponse<ViewPostDTO>();
             try
             {
-                var cc = await _unitOfWork.PostRepository.GetAllAsync(x => x.Type);
+                var ccc = await _unitOfWork.PostRepository.GetAllAsync(x => x.Type);
+                var cc = ccc.OrderByDescending(x => x.Id);
                 var c = cc.Where(x => x.Id == Id).First();
                 if (c == null || c.IsDeleted != false)
                 {
@@ -145,7 +144,8 @@ namespace Application.Services
             try
             {
                 List<ViewPostDTO> DTOs = new List<ViewPostDTO>();
-                var cc = await _unitOfWork.PostRepository.GetAllAsync(x => x.Type);
+                var ccc = await _unitOfWork.PostRepository.GetAllAsync(x => x.Type);
+                var cc = ccc.OrderByDescending(x => x.Id);
                 var c = cc.Where(x => x.ShopID == shopId).ToList();
                 foreach (var item in c)
                 {
@@ -187,7 +187,8 @@ namespace Application.Services
             List<ViewPostDTO> DTOs = new List<ViewPostDTO>();
             try
             {
-                var posts = await _unitOfWork.PostRepository.GetAllAsync(x => x.Type);
+                var postss = await _unitOfWork.PostRepository.GetAllAsync(x => x.Type);
+                var posts = postss.OrderByDescending(x => x.Id); 
                 foreach (var post in posts)
                 {
                     if (post.IsDeleted == false)

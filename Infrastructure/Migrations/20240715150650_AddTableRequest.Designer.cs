@@ -3,6 +3,7 @@ using System;
 using Infrastructures;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructures.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240715150650_AddTableRequest")]
+    partial class AddTableRequest
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -378,49 +381,6 @@ namespace Infrastructures.Migrations
                     b.HasIndex("TypeId");
 
                     b.ToTable("PostPets");
-                });
-
-            modelBuilder.Entity("Domain.Entitys.Request", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("BuyerId")
-                        .HasColumnType("integer");
-
-                    b.Property<int?>("CreatedBy")
-                        .HasColumnType("integer");
-
-                    b.Property<DateTime>("CreationDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<int?>("DeleteBy")
-                        .HasColumnType("integer");
-
-                    b.Property<DateTime?>("DeletionDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("boolean");
-
-                    b.Property<int?>("ModificationBy")
-                        .HasColumnType("integer");
-
-                    b.Property<DateTime?>("ModificationDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<int?>("PostId")
-                        .HasColumnType("integer");
-
-                    b.Property<int?>("ShopId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Requests");
                 });
 
             modelBuilder.Entity("Domain.Entitys.Shop", b =>

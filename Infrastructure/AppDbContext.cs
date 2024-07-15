@@ -19,6 +19,7 @@ namespace Infrastructures
         public DbSet<Image> Images { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<PostPet> PostPets { get; set; }
+        public DbSet<Request> Requests { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

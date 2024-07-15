@@ -26,7 +26,7 @@ namespace WebAPI.Controllers
 
 		[HttpGet("get-by-id")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
-		public async Task<IActionResult> GetBusinessPlanById([FromBody] BusinessPlanIdRequest request)
+		public async Task<IActionResult> GetBusinessPlanById([FromQuery] BusinessPlanIdRequest request)
 		{
 			var result = await _businessPlanService.GetBusinessPlanById(request.Id);
 			return Ok(result);
